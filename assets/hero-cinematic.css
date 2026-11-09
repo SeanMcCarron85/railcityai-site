@@ -1,0 +1,128 @@
+/* Rail City AI: cinematic scroll-scrubbed hero (frames drawn to canvas).
+   Static by default (no JS / reduced motion): final frame + headline + logo + buttons.
+   html.cine-on (added by hero-cinematic.js once setup succeeds) turns on the pinned, scrubbed film. */
+.hero.cine{position:relative;padding:0;--logo:1;--end:1;--flash:0;--cue:0}
+.cine-stage{position:relative;min-height:calc(100svh - 66px);overflow:hidden;background:#0f1115;isolation:isolate}
+.cine-still,.cine-still img,.cine-canvas{position:absolute;inset:0;width:100%;height:100%}
+.cine-still img{object-fit:cover;display:block;max-width:none}
+.cine-canvas{display:none;z-index:1}
+/* readability shade: top for the headline, bottom for the buttons, soft vignette */
+.cine-shade{position:absolute;inset:0;z-index:2;pointer-events:none;background:
+  linear-gradient(180deg,rgba(9,11,15,.86) 0%,rgba(9,11,15,.55) 28%,rgba(9,11,15,0) 46%,rgba(9,11,15,0) 66%,rgba(9,11,15,.7) 100%),
+  radial-gradient(120% 90% at 50% 50%,transparent 55%,rgba(5,7,10,.55) 100%)}
+.cine-flash{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:var(--flash);mix-blend-mode:screen;
+  background:radial-gradient(60% 45% at 50% 52%,rgba(225,250,255,.95),rgba(34,211,238,.45) 45%,transparent 75%)}
+.cine-content{position:relative;z-index:4;min-height:inherit;display:flex;flex-direction:column;align-items:center;text-align:center;
+  padding:clamp(28px,6svh,64px) 20px clamp(28px,6svh,56px);gap:clamp(8px,2svh,20px)}
+.cine-content>*{width:100%;max-width:960px}
+.hero.cine h1{text-shadow:0 2px 28px rgba(0,0,0,.7),0 0 2px rgba(0,0,0,.6)}
+.hero.cine .hero-intro p{color:#c4ccd8;text-shadow:0 1px 14px rgba(0,0,0,.8)}
+.cine-logo-wrap{flex:1 1 auto;display:flex;align-items:center;justify-content:center;min-height:0}
+.cine-logo{display:block;width:min(700px,92%);height:auto;max-height:42svh;object-fit:contain;
+  opacity:var(--logo);transform:scale(calc(1 + (1 - var(--logo)) * .06));
+  filter:blur(calc((1 - var(--logo)) * 14px)) brightness(calc(1 + (1 - var(--logo)) * 1.4)) drop-shadow(0 0 20px rgba(34,211,238,calc(var(--logo) * .22)))}
+.hero.cine .hero-end{opacity:var(--end);transform:translateY(calc((1 - var(--end)) * 22px))}
+.hero.cine .hero-end .coming{margin-bottom:16px;color:var(--steel)}
+.cine-cue,.cine-skip{display:none}
+
+/* ---- animated mode ---- */
+html.cine-on .hero.cine{height:420vh;margin-top:-66px;--logo:0;--end:0;--cue:1}
+html.cine-on .cine-stage{position:sticky;top:0;height:100vh;height:100svh;min-height:0}
+html.cine-on .cine-still{display:none}
+html.cine-on .cine-canvas{display:block}
+html.cine-on .cine-content{height:100%;padding-top:calc(66px + clamp(18px,4.5svh,52px));padding-bottom:clamp(70px,10svh,96px)}
+html.cine-on .hero.cine .hero-end{visibility:visible}
+html.cine-on .cine-end-hidden .hero-end{visibility:hidden}
+html.cine-on .cine-cue{display:flex;position:absolute;z-index:5;left:50%;bottom:26px;transform:translateX(-50%);flex-direction:column;align-items:center;gap:10px;
+  color:#b9c6d6;font:700 .74rem/1 var(--head);letter-spacing:.28em;text-transform:uppercase;opacity:var(--cue);pointer-events:none}
+.cine-cue i{display:block;width:1px;height:38px;background:linear-gradient(180deg,rgba(34,211,238,0),#22d3ee);position:relative;overflow:hidden}
+.cine-cue i::after{content:"";position:absolute;left:-2px;width:5px;height:10px;border-radius:3px;background:#e6fbff;box-shadow:0 0 10px #22d3ee;animation:cineDrop 1.8s ease-in infinite}
+@keyframes cineDrop{from{top:-10px;opacity:0}30%{opacity:1}to{top:38px;opacity:0}}
+html.cine-on .cine-skip{display:block;position:absolute;z-index:6;right:18px;bottom:22px;font:600 .8rem/1 var(--head);letter-spacing:.12em;text-transform:uppercase;
+  color:#c9d3df;background:rgba(12,14,19,.55);border:1px solid rgba(142,162,187,.35);padding:9px 14px;border-radius:999px;text-decoration:none;
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:opacity .3s,color .2s,border-color .2s}
+html.cine-on .cine-skip:hover{color:#fff;border-color:#22d3ee}
+html.cine-on .cine-done .cine-skip{opacity:0;pointer-events:none}
+.cine-loadbar{display:none}
+html.cine-on .cine-loadbar{display:block;position:absolute;z-index:5;left:0;top:0;height:2px;width:calc(var(--loaded,0) * 100%);
+  background:linear-gradient(90deg,transparent,#22d3ee);opacity:calc(1 - var(--loaded,0));transition:width .3s,opacity .6s}
+@media (max-width:700px){
+  html.cine-on .hero.cine{height:330vh}
+  .cine-logo{width:100%;max-width:none;max-height:34svh}
+  html.cine-on .cine-skip{right:10px;bottom:16px;font-size:.7rem;padding:8px 11px}
+  html.cine-on .cine-cue{bottom:20px;letter-spacing:.2em}
+  html.cine-on .cine-content{padding-bottom:clamp(64px,9svh,84px)}
+}
+@media (prefers-reduced-motion: reduce){
+  html.cine-on .hero.cine{height:auto;margin-top:0;--logo:1;--end:1;--flash:0;--cue:0}
+  html.cine-on .cine-stage{position:relative;height:auto;min-height:calc(100svh - 66px)}
+  html.cine-on .cine-still{display:block}
+  html.cine-on .cine-canvas,html.cine-on .cine-cue,html.cine-on .cine-skip,html.cine-on .cine-loadbar{display:none}
+  .cine-cue i::after{animation:none}
+}
+/* gradient-clipped text must not carry a text-shadow (it shows through the transparent glyphs) */
+.hero.cine h1 .grad{text-shadow:none;filter:drop-shadow(0 2px 18px rgba(0,0,0,.65))}
+/* soft dark pool behind the headline so it stays legible through the light burst */
+.hero.cine .hero-intro{position:relative}
+.hero.cine .hero-intro::before{content:"";position:absolute;z-index:-1;left:50%;top:50%;width:min(1000px,130%);height:170%;transform:translate(-50%,-50%);
+  background:radial-gradient(closest-side,rgba(8,10,14,.62),rgba(8,10,14,.35) 60%,transparent);pointer-events:none}
+
+/* coming-soon line: keep it readable over the light glow */
+.hero.cine .hero-end .coming{color:#d3dbe6;font-weight:600;text-shadow:0 1px 10px rgba(0,0,0,.85)}
+@media (max-width:700px){
+  .hero.cine .hero-end .coming{display:inline-block;width:auto;max-width:92%;font-size:.98rem;color:#eef3f8;
+    background:rgba(9,11,15,.72);border:1px solid rgba(142,162,187,.35);border-radius:999px;padding:7px 14px;
+    backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+}
+.hero.cine .hero-intro .studio-line{font-size:clamp(.9rem,1.8vw,1rem);color:#e3eaf2;font-weight:600;letter-spacing:.01em;margin-top:6px}
+
+/* QG: persistent AI label on the hero visuals (all modes: animated, no-JS, reduced motion) */
+.cine-stage .cine-ai-tag{position:absolute;z-index:6;left:16px;top:auto;bottom:22px;pointer-events:none}
+html.cine-on .cine-stage .cine-ai-tag{bottom:22px}
+@media (max-width:700px){.cine-stage .cine-ai-tag,html.cine-on .cine-stage .cine-ai-tag{left:10px;bottom:18px}}
+
+/* QG: keep the intro lines >= 4.5:1 through the light burst */
+.hero.cine .hero-intro::before{width:min(1040px,140%);height:200%;
+  background:radial-gradient(closest-side,rgba(8,10,14,.82),rgba(8,10,14,.6) 60%,rgba(8,10,14,.2) 85%,transparent)}
+.hero.cine .hero-intro p{color:#d9e0ea}
+.hero.cine .hero-intro .studio-line{display:inline-block;width:auto;max-width:min(720px,94%);color:#eef3f8;
+  background:rgba(8,10,14,.8);border:1px solid rgba(142,162,187,.35);border-radius:14px;padding:7px 16px;
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);text-shadow:none}
+/* static hero (no JS / reduced motion): fit one screen so the bottom-left AI tag is on the first view */
+html:not(.cine-on) .cine-logo{max-height:30svh}
+html:not(.cine-on) .cine-content{padding-bottom:64px}
+
+/* 2026-11-09 logo-overlap fix: the logo gets its own reserved slot in the flex column and can never
+   grow past it. The wrap takes the space left between the intro and the buttons (with a floor), and the
+   image is absolutely placed inside it with a clear inset gap and object-fit:contain, so the logo shrinks
+   to fit instead of spilling onto the studio pill or the buttons. The fade-in now scales up to 1
+   (never above), so the transformed box stays inside the slot at every scroll point. */
+.cine-logo-wrap{position:relative;flex:1 1 0;min-height:clamp(96px,22svh,300px);width:100%}
+.cine-logo,html:not(.cine-on) .cine-logo{position:absolute;top:var(--logo-gap,18px);left:0;right:0;margin:0 auto;
+  width:min(700px,92%);height:calc(100% - 2 * var(--logo-gap,18px));max-height:none;object-fit:contain;
+  transform:scale(calc(1 - (1 - var(--logo)) * .06))}
+/* static hero (no JS / reduced motion): give the slot a definite height so it never collapses */
+html:not(.cine-on) .cine-logo-wrap{flex:0 0 auto;height:clamp(140px,30svh,320px)}
+@media (max-width:700px){
+  .cine-logo,html:not(.cine-on) .cine-logo{width:100%}
+  .cine-logo-wrap{min-height:clamp(84px,18svh,220px)}
+  html:not(.cine-on) .cine-logo-wrap{height:clamp(110px,24svh,220px)}
+}
+@media (prefers-reduced-motion: reduce){
+  html.cine-on .cine-logo-wrap{flex:0 0 auto;height:clamp(140px,30svh,320px)}
+}
+@media (prefers-reduced-motion: reduce) and (max-width:700px){
+  html.cine-on .cine-logo-wrap{height:clamp(110px,24svh,220px)}
+}
+
+/* 2026-11-09 v3.3: static hero (no JS / reduced motion) must fit one screen on small phones so the
+   AI-generated visuals tag stays on screen; the logo slot now takes the leftover space (with a floor and a cap)
+   instead of a fixed height. */
+html:not(.cine-on) .cine-logo-wrap{flex:1 1 0;height:auto;min-height:clamp(96px,18svh,200px);max-height:320px}
+@media (max-width:700px){
+  html:not(.cine-on) .cine-logo-wrap{min-height:64px;max-height:220px}
+}
+@media (max-width:700px) and (max-height:760px){
+  html:not(.cine-on) .cine-content{padding-top:clamp(14px,3svh,28px);padding-bottom:50px;gap:clamp(8px,1.4svh,14px)}
+  html:not(.cine-on) .cine-logo{--logo-gap:10px}
+}

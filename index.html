@@ -3,132 +3,174 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rail City AI — AI Video and AI Agents for Your Business</title>
-<meta name="description" content="Rail City AI produces AI-labeled short-form video reels for your brand, with AI agents coming soon.">
+<title>Rail City AI — One studio. Every stop. Short-form AI video for your brand</title>
+<meta name="description" content="Rail City AI makes AI-labeled short-form video reels for your brand. Websites and AI agents are coming soon.">
 <link rel="canonical" href="https://railcityai.com/">
-<meta property="og:title" content="Rail City AI">
-<meta property="og:description" content="AI video and AI agents for your business.">
+<meta property="og:title" content="Rail City AI — One studio. Every stop.">
+<meta property="og:description" content="Short-form AI video reels for your brand, available now. Websites and AI agents are coming soon.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://railcityai.com/">
 <meta property="og:image" content="https://railcityai.com/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f1115">
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="assets/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" sizes="180x180">
-<style>
-*,*::before,*::after{box-sizing:border-box}
-:root{
-  --bg:#14161a;
-  --panel:#1c2028;
-  --ink:#f3f4f6;
-  --muted:#9aa3b2;
-  --accent:#22d3ee;
-  --accent-ink:#061018;
-  --steel:#7b8fa8;
-  --line:#2a3140;
-}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-wrap:break-word}
-.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-header.nav{border-bottom:1px solid var(--line);background:rgba(20,22,26,.92);backdrop-filter:blur(8px);position:sticky;top:0;z-index:20}
-header.nav .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:10px;padding-bottom:10px;gap:16px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
-.brand img{height:52px;width:auto;display:block}
-.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:700;text-decoration:none;padding:14px 26px;border-radius:10px;border:2px solid var(--accent)}
-.btn:hover{filter:brightness(1.08)}
-.btn.small{padding:8px 16px;font-size:.9rem}
-.btn.ghost{background:transparent;color:var(--accent)}
-.btn.ghost:hover{background:rgba(34,211,238,.08)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-section{padding:72px 0}
-.hero{text-align:center;padding:72px 0 64px}
-.hero-logo{max-width:min(520px,92%);height:auto;margin:0 auto 28px;display:block}
-.hero h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.15;margin:0 0 16px}
-.hero p{color:var(--muted);font-size:1.15rem;max-width:640px;margin:0 auto 20px}
-.hero .coming{font-size:.95rem;color:var(--steel);margin-bottom:28px}
-h2{font-size:clamp(1.6rem,4vw,2.2rem);margin:0 0 12px;text-align:center}
-.sub{color:var(--muted);text-align:center;max-width:620px;margin:0 auto 40px}
-.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:28px}
-.step-num{display:inline-flex;width:36px;height:36px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:800;align-items:center;justify-content:center;margin-bottom:12px}
-.card h3{margin:0 0 8px}
-.card p{margin:0;color:var(--muted)}
-.price{font-size:2.4rem;font-weight:800;margin:8px 0 4px}
-.price small{font-size:1rem;color:var(--muted);font-weight:500}
-.tier.featured{border-color:var(--accent);box-shadow:0 0 0 1px rgba(34,211,238,.25)}
-.tier ul{padding-left:18px;color:var(--muted);margin:16px 0 24px}
-.tier .btn{width:100%;text-align:center;box-sizing:border-box}
-.tier .btn + .btn{margin-top:10px}
-.note{font-size:.85rem;color:var(--steel);margin:12px 0 0;text-align:left}
-.addon{margin-top:24px;text-align:center;color:var(--muted)}
-.addon strong{color:var(--ink)}
-.guarantee{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
-.guarantee blockquote{font-size:clamp(1.2rem,3vw,1.6rem);font-weight:700;max-width:760px;margin:0 auto;color:var(--ink)}
-.contact{text-align:center}
-.spokes{margin:36px auto 0;max-width:320px;text-align:center}
-.spokes img{width:100%;height:auto;border-radius:16px;display:block;border:1px solid var(--line)}
-.spokes figcaption{font-size:.9rem;margin-top:10px;color:var(--muted)}
-.samples{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));max-width:1000px;margin:0 auto}
-.sample{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column}
-.sample video{width:100%;height:auto;aspect-ratio:9/16;display:block;border-radius:10px;background:#0d0f12;object-fit:cover}
-.sample figcaption{margin-top:12px;font-size:.95rem;color:var(--ink)}
-.sample .label{display:block;margin-top:6px;font-size:.82rem;color:var(--steel)}
-.samples-note{font-size:.85rem;color:var(--steel);text-align:center;max-width:680px;margin:24px auto 0}
-footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:var(--muted);font-size:.9rem}
-footer a{color:var(--accent)}
-@media (max-width:520px){
-  .brand img{height:44px}
-}
-</style>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/space-grotesk-latin-700-normal.woff2" crossorigin>
+<link rel="preload" as="image" href="assets/hero-cine/d/f001.webp" type="image/webp" media="(min-width: 701px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero-cine/m/f001.webp" type="image/webp" media="(max-width: 700px)" fetchpriority="high">
+<link rel="stylesheet" href="assets/v2.css">
+<link rel="stylesheet" href="assets/hero-cinematic.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="bg-fx" aria-hidden="true"></div>
+
 <header class="nav"><div class="wrap">
   <a class="brand" href="./" aria-label="Rail City AI home">
-    <img src="assets/logo-header.png" alt="Rail City AI" width="280" height="156">
+    <img class="mark" src="assets/header-mark.webp" alt="" width="240" height="104">
+    <span class="wordmark">RAIL CITY <span>AI</span></span>
   </a>
-  <a class="btn small" href="#pricing">Get started</a>
+  <nav aria-label="Main">
+    <ul class="nav-links">
+      <li><a href="#presenters">Presenters</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#samples">Samples</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#pilot">Free pilot</a></li>
+    </ul>
+  </nav>
+  <a class="btn small glow" href="#pricing">Get started</a>
 </div></header>
 
-<main>
-<section class="hero"><div class="wrap">
-  <img class="hero-logo" src="assets/logo.png" alt="Rail City AI logo" width="520" height="290">
-  <h1>AI video and AI agents for your business</h1>
-  <p>We script, produce, and deliver short-form reels for your brand, ready to post on the platforms you already use.</p>
-  <p class="coming">AI agents for small businesses: details coming soon.</p>
-  <a class="btn" href="#contact">Start your first reels</a>
-  <figure class="spokes">
-    <img src="maya-hollis.jpg" alt="Maya Hollis, Rail City AI's AI spokesperson" width="320" loading="eager">
-    <figcaption><strong>Meet Maya Hollis.</strong> Maya is an AI spokesperson, not a real person.</figcaption>
-  </figure>
-</div></section>
+<main id="main">
+<section class="hero cine" id="top" aria-label="Rail City AI" data-frames="assets/hero-cine/">
+  <div class="cine-stage">
+    <picture class="cine-still" aria-hidden="true">
+      <source media="(max-width: 700px)" srcset="assets/hero-cine/final-m.webp">
+      <img src="assets/hero-cine/final-d.webp" alt="" width="1280" height="720">
+    </picture>
+    <canvas class="cine-canvas" aria-hidden="true"></canvas>
+    <div class="cine-shade" aria-hidden="true"></div>
+    <div class="cine-flash" aria-hidden="true"></div>
+    <div class="cine-loadbar" aria-hidden="true"></div>
+    <div class="cine-content">
+      <div class="hero-intro">
+        <h1><span class="l1">One studio.</span> <span class="l2 grad">Every stop.</span></h1>
+        <p>We make short videos that tell your story today, with websites and AI agents coming soon to the same line.</p>
+        <p class="studio-line">Rail City AI is an AI studio: short-form video now, with websites and AI agents coming soon.</p>
+      </div>
+      <div class="cine-logo-wrap"><img class="cine-logo" src="assets/hero-cine/logo-cine.webp" alt="Rail City AI logo" width="1100" height="528"></div>
+      <div class="hero-end">
+        <div class="cta-row">
+          <a class="btn glow" href="#contact">Start your first reels</a>
+          <a class="btn ghost" href="#samples">See sample work</a>
+        </div>
+      </div>
+    </div>
+    <span class="ai-tag cine-ai-tag">AI-generated visuals</span>
+    <div class="cine-cue" aria-hidden="true">Scroll<i></i></div>
+    <a class="cine-skip" href="#maya">Skip intro</a>
+  </div>
+</section>
 
-<section id="how"><div class="wrap">
-  <h2>How it works</h2>
-  <p class="sub">A simple process from idea to finished video.</p>
-  <div class="grid">
-    <div class="card"><div class="step-num">1</div><h3>Tell us about your brand</h3><p>Share your goals, audience, and any topics you want covered.</p></div>
-    <div class="card"><div class="step-num">2</div><h3>Approve the script</h3><p>We draft scripts for your reels. You review and approve before production starts.</p></div>
-    <div class="card"><div class="step-num">3</div><h3>Get your reels</h3><p>We produce the videos and deliver them ready to post.</p></div>
+<div class="rail-divider" aria-hidden="true"><span class="pulse"></span></div>
+
+<section id="maya" class="maya"><div class="wrap maya-grid reveal">
+  <figure class="maya-photo">
+    <img src="maya-hollis.jpg" alt="Maya Hollis, Rail City AI's AI spokesperson" width="447" height="800" loading="lazy">
+    <span class="ai-tag">AI-generated</span>
+  </figure>
+  <div class="maya-copy">
+    <p class="kicker">Our spokesperson</p>
+    <h2>Meet Maya Hollis.</h2>
+    <p class="lead">Maya is Rail City AI's spokesperson. She's AI-generated, not a real person, and she's here to help local businesses tell their story.</p>
+    <p class="muted">Every reel we make carries a visible AI label. Our presenters never pose as real employees or customers.</p>
+    <a class="btn ghost" href="#presenters">Meet the other presenters</a>
   </div>
 </div></section>
 
+<section id="presenters"><div class="wrap">
+  <div class="section-head reveal">
+    <p class="kicker">Presenter styles</p>
+    <h2>Meet our AI presenters</h2>
+    <p class="sub">Maya is our main spokesperson. Ask about other presenter styles for your reels.</p>
+  </div>
+  <div class="presenters">
+    <article class="presenter reveal" tabindex="0">
+      <div class="p-img"><img src="presenters/maya-hollis.webp" alt="Maya Hollis, AI-generated presenter" width="420" height="560" loading="lazy"><span class="ai-tag">AI-generated</span><span class="badge">Main spokesperson</span></div>
+      <div class="p-body"><h3>Maya Hollis</h3><p>The friendly neighbor who knows every spot in town.</p><span class="label">AI-generated presenter. Not a real person.</span></div>
+    </article>
+    <article class="presenter reveal" tabindex="0">
+      <div class="p-img"><img src="presenters/dev-carter.webp" alt="Dev Carter, AI-generated presenter" width="420" height="560" loading="lazy"><span class="ai-tag">AI-generated</span><span class="badge alt">Backup spokesperson</span></div>
+      <div class="p-body"><h3>Dev Carter</h3><p>Calm and plainspoken. Says it straight.</p><span class="label">AI-generated presenter. Not a real person.</span></div>
+    </article>
+    <article class="presenter reveal" tabindex="0">
+      <div class="p-img"><img src="presenters/june-arden.webp" alt="June Arden, AI-generated presenter" width="420" height="560" loading="lazy"><span class="ai-tag">AI-generated</span></div>
+      <div class="p-body"><h3>June Arden</h3><p>Polished and measured, with a news-desk cadence.</p><span class="label">AI-generated presenter. Not a real person.</span></div>
+    </article>
+    <article class="presenter reveal" tabindex="0">
+      <div class="p-img"><img src="presenters/hank-delaney.webp" alt="Hank Delaney, AI-generated presenter" width="420" height="560" loading="lazy"><span class="ai-tag">AI-generated</span></div>
+      <div class="p-body"><h3>Hank Delaney</h3><p>Easygoing small-town diner warmth.</p><span class="label">AI-generated presenter. Not a real person.</span></div>
+    </article>
+    <article class="presenter reveal" tabindex="0">
+      <div class="p-img"><img src="presenters/priya-nair.webp" alt="Priya Nair, AI-generated presenter" width="420" height="560" loading="lazy"><span class="ai-tag">AI-generated</span></div>
+      <div class="p-body"><h3>Priya Nair</h3><p>Bright and creative, made for boutiques.</p><span class="label">AI-generated presenter. Not a real person.</span></div>
+    </article>
+    <article class="presenter reveal" tabindex="0">
+      <div class="p-img"><img src="presenters/marco-reyes.webp" alt="Marco Reyes, AI-generated presenter" width="420" height="560" loading="lazy"><span class="ai-tag">AI-generated</span></div>
+      <div class="p-body"><h3>Marco Reyes</h3><p>Upbeat and street-level, with food-truck energy.</p><span class="label">AI-generated presenter. Not a real person.</span></div>
+    </article>
+  </div>
+  <div class="choose reveal">
+    <p><strong>Ask about our AI presenter styles, or get a custom avatar of your own likeness.</strong> A custom avatar is a one-time $100 on Starter ($250 total), +$100/mo on the Growth plan, and included in the $600 Done-for-You plan. It's made only with your signed consent to use your face and voice, and it isn't available in the free pilot. <a href="#pricing">See pricing</a></p>
+  </div>
+</div></section>
+
+<div class="rail-divider" aria-hidden="true"><span class="pulse"></span></div>
+
+<section id="how"><div class="wrap">
+  <div class="section-head reveal">
+    <p class="kicker">The process</p>
+    <h2>How it works</h2>
+    <p class="sub">A simple process from idea to finished video.</p>
+  </div>
+  <div class="steps">
+    <div class="card step reveal"><div class="step-num">1</div><h3>Tell us about your brand</h3><p>Share your goals, audience, and any topics you want covered.</p></div>
+    <div class="card step reveal"><div class="step-num">2</div><h3>Approve the script</h3><p>We draft scripts for your reels. You review and approve before production starts.</p></div>
+    <div class="card step reveal"><div class="step-num">3</div><h3>Get your reels</h3><p>We produce the videos and deliver them ready to post.</p></div>
+  </div>
+</div></section>
+
+<section class="track-band" id="right-track" aria-labelledby="right-track-h"><div class="wrap reveal">
+  <span class="track-line" aria-hidden="true"></span>
+  <h2 id="right-track-h">Your brand, <span class="grad">on the right track.</span></h2>
+  <p>Tell us about your business, approve every script, and get reels ready to post on the platforms you already use.</p>
+  <a class="btn ghost" href="#samples">See sample work</a>
+</div></section>
+
+<div class="rail-divider" aria-hidden="true"><span class="pulse"></span></div>
+
 <section id="samples"><div class="wrap">
-  <h2>Sample work</h2>
-  <p class="sub">Three short sample reels we made for made-up local businesses, so you can see the style before you buy.</p>
+  <div class="section-head reveal">
+    <p class="kicker">See the style</p>
+    <h2>Sample work</h2>
+    <p class="sub">Three short sample reels we made for made-up local businesses, so you can see the style before you buy.</p>
+  </div>
   <div class="samples">
-    <figure class="sample">
+    <figure class="sample reveal">
       <video controls playsinline preload="none" poster="samples/reel1-depot-grind-poster.jpg" width="1080" height="1920" aria-label="Sample reel: Depot Grind, a fictional coffee shop">
         <source src="samples/reel1-depot-grind.mp4" type="video/mp4">
       </video>
       <figcaption>Depot Grind: a morning coffee ad for a made-up coffee shop.<span class="label">Sample for a fictional business. AI-generated.</span></figcaption>
     </figure>
-    <figure class="sample">
+    <figure class="sample reveal">
       <video controls playsinline preload="none" poster="samples/reel2-crossing-auto-poster.jpg" width="1080" height="1920" aria-label="Sample reel: Crossing Auto Repair, a fictional auto shop">
         <source src="samples/reel2-crossing-auto.mp4" type="video/mp4">
       </video>
       <figcaption>Crossing Auto Repair: a check-engine-light ad for a made-up auto shop.<span class="label">Sample for a fictional business. AI-generated.</span></figcaption>
     </figure>
-    <figure class="sample">
+    <figure class="sample reveal">
       <video controls playsinline preload="none" poster="samples/reel3-shiawassee-paws-poster.jpg" width="1080" height="1920" aria-label="Sample reel: Shiawassee Paws Grooming, a fictional pet groomer">
         <source src="samples/reel3-shiawassee-paws.mp4" type="video/mp4">
       </video>
@@ -138,11 +180,16 @@ footer a{color:var(--accent)}
   <p class="samples-note">These businesses, names, phone numbers and links are made up. Maya Hollis is an AI spokesperson, not a real person, and every scene is AI-generated.</p>
 </div></section>
 
+<div class="rail-divider" aria-hidden="true"><span class="pulse"></span></div>
+
 <section id="pricing"><div class="wrap">
-  <h2>Pricing</h2>
-  <p class="sub">Pick the plan that fits how often you want to post.</p>
-  <div class="grid">
-    <div class="card tier">
+  <div class="section-head reveal">
+    <p class="kicker">Plans</p>
+    <h2>Pricing</h2>
+    <p class="sub">Pick the plan that fits how often you want to post.</p>
+  </div>
+  <div class="tiers">
+    <div class="card tier reveal">
       <h3>Starter</h3>
       <div class="price">$150 <small>one-time</small></div>
       <ul><li>3 reels</li><li>Try it with no ongoing commitment</li></ul>
@@ -150,15 +197,16 @@ footer a{color:var(--accent)}
       <a class="btn small ghost" href="mailto:railcityai@gmail.com?subject=Rail%20City%20AI%20-%20Starter%20%2B%20Avatar%20%24250">Add custom avatar (+$100)</a>
       <p class="note">Checkout coming soon. Email us to start.</p>
     </div>
-    <div class="card tier featured">
+    <div class="card tier featured reveal">
+      <span class="tier-flag">Monthly</span>
       <h3>Growth</h3>
       <div class="price">$300 <small>/mo</small></div>
       <ul><li>6 reels per month</li><li>Steady posting schedule</li></ul>
-      <a class="btn" href="mailto:railcityai@gmail.com?subject=Rail%20City%20AI%20-%20Growth%20%24300%2Fmo">Choose Growth</a>
+      <a class="btn glow" href="mailto:railcityai@gmail.com?subject=Rail%20City%20AI%20-%20Growth%20%24300%2Fmo">Choose Growth</a>
       <a class="btn small ghost" href="mailto:railcityai@gmail.com?subject=Rail%20City%20AI%20-%20Growth%20%2B%20Avatar%20%24400%2Fmo">Add custom avatar (+$100/mo)</a>
       <p class="note">Checkout coming soon. Email us to start. Monthly plans begin only after you agree to auto-renewal in writing.</p>
     </div>
-    <div class="card tier">
+    <div class="card tier reveal">
       <h3>Done-for-You</h3>
       <div class="price">$600 <small>/mo</small></div>
       <ul><li>10 reels per month</li><li>Custom avatar included</li><li>For higher-volume posting</li></ul>
@@ -166,37 +214,63 @@ footer a{color:var(--accent)}
       <p class="note">Checkout coming soon. Email us to start. Monthly plans begin only after you agree to auto-renewal in writing.</p>
     </div>
   </div>
+  <div class="fine reveal">
   <p class="addon">Every package is paid in full upfront. A reel is one finished video, 15 to 60 seconds long. Unused reels don't roll over.</p>
-  <p class="addon">Monthly plans renew automatically each month until you cancel. While online checkout is not live yet, a monthly plan begins only after you agree to auto-renewal in a signed agreement. We email you a reminder before each renewal. You can cancel any time by emailing railcityai@gmail.com. Cancel at least 7 days before renewal and you won't be charged again, and you get a prorated refund of the plan fee (excluding the avatar add-on fee; on Done-for-You, $100 of the $600 is the non-refundable avatar share and only the other $500 is prorated) for reels not yet delivered this period (for example, cancelling 7 or more days before renewal with 3 of 6 reels delivered on the Growth plan ($300) means $150 back). A month that has already billed because you cancelled inside the 7-day cutoff is non-refundable. The avatar add-on fee is non-refundable once your avatar is set up.</p>
+  <ul class="terms-list" aria-label="Renewals, cancellation and refunds">
+    <li>Monthly plans renew automatically each month until you cancel.</li>
+    <li>While online checkout is not live yet, a monthly plan begins only after you agree to auto-renewal in a signed agreement.</li>
+    <li>We email you a reminder before each renewal.</li>
+    <li>You can cancel any time by emailing railcityai@gmail.com.</li>
+    <li>Cancel at least 7 days before renewal and you won't be charged again, and you get a prorated refund of the plan fee (excluding the avatar add-on fee; on Done-for-You, $100 of the $600 is the non-refundable avatar share and only the other $500 is prorated) for reels not yet delivered this period (for example, cancelling 7 or more days before renewal with 3 of 6 reels delivered on the Growth plan ($300) means $150 back).</li>
+    <li>A month that has already billed because you cancelled inside the 7-day cutoff is non-refundable.</li>
+    <li>The avatar add-on fee is non-refundable once your avatar is set up.</li>
+  </ul>
   <p class="addon">All reels are AI-generated and carry a visible AI label.</p>
   <p class="addon"><strong>Custom avatar: one-time $100 on Starter ($250 total), +$100/mo on the Growth plan ($300), included in the $600 plan. Non-refundable once your avatar is set up.</strong> A custom avatar of your own likeness, made only with your signed consent to use your face and voice. Not available in the free pilot.</p>
+  </div>
 </div></section>
 
-<section class="guarantee" id="guarantee"><div class="wrap">
+<section class="guarantee" id="guarantee"><div class="wrap reveal">
+  <p class="kicker">Paid packages</p>
   <h2>Our guarantee</h2>
   <blockquote>First 2 videos within 14 days of an approved script, or your first payment back.</blockquote>
-  <p class="addon"><small>Applies to paid packages only and covers the first 2 videos of your first payment. If they aren't delivered within 14 calendar days of script approval (an email reply counts as approval), you get a full refund of your first payment: $150, $300 or $600 (plan fee only: a missed guarantee on Starter with the avatar refunds $150, and on Growth with the avatar refunds $300, because avatar add-on fees are non-refundable once your avatar is set up; on Done-for-You you get the full $600, including the avatar share). You keep whatever was delivered, and service ends with the refund. The clock pauses if we're waiting on assets or feedback from you for more than 3 days, and we'll email you when it pauses and when it resumes. To claim, email railcityai@gmail.com within 14 days of the missed deadline. Refunds go to your original payment method within 7 days of your emailed claim or cancellation, and we cover the processing fees. Filing a chargeback instead of emailing a claim voids the guarantee. Later months have no delivery guarantee.</small></p>
+  <ul class="terms-list small" aria-label="Guarantee terms">
+    <li>Applies to paid packages only and covers the first 2 videos of your first payment.</li>
+    <li>If they aren't delivered within 14 calendar days of script approval (an email reply counts as approval), you get a full refund of your first payment: $150, $300 or $600 (plan fee only: a missed guarantee on Starter with the avatar refunds $150, and on Growth with the avatar refunds $300, because avatar add-on fees are non-refundable once your avatar is set up; on Done-for-You you get the full $600, including the avatar share).</li>
+    <li>You keep whatever was delivered, and service ends with the refund.</li>
+    <li>The clock pauses if we're waiting on assets or feedback from you for more than 3 days, and we'll email you when it pauses and when it resumes.</li>
+    <li>To claim, email railcityai@gmail.com within 14 days of the missed deadline.</li>
+    <li>Refunds go to your original payment method within 7 days of your emailed claim or cancellation, and we cover the processing fees.</li>
+    <li>Filing a chargeback instead of emailing a claim voids the guarantee.</li>
+    <li>Later months have no delivery guarantee.</li>
+  </ul>
 </div></section>
 
 <section id="pilot"><div class="wrap">
-  <h2>Free pilot: 5 spots</h2>
-  <p class="sub">Get 2 free reels in exchange for a required honest testimonial. It doesn't have to be positive.</p>
-  <p class="addon">Pilot reels use our AI spokesperson or AI voiceover only, with no custom avatar. The guarantee doesn't apply to the pilot. Any testimonial we publish will note that you received free reels in exchange for your honest review.</p>
-  <p style="text-align:center;margin-top:24px"><a class="btn" href="mailto:railcityai@gmail.com?subject=Free%20pilot">Apply for the pilot</a></p>
+  <div class="pilot-card reveal">
+    <p class="kicker">Limited</p>
+    <h2>Free pilot: 5 spots</h2>
+    <p class="sub">Get 2 free reels in exchange for a required honest testimonial. It doesn't have to be positive.</p>
+    <p class="addon">Pilot reels use our AI spokesperson or AI voiceover only, with no custom avatar. The guarantee doesn't apply to the pilot. Any testimonial we publish will note that you received free reels in exchange for your honest review.</p>
+    <p class="center"><a class="btn glow" href="mailto:railcityai@gmail.com?subject=Free%20pilot">Apply for the pilot</a></p>
+  </div>
 </div></section>
 
-<section class="contact" id="contact"><div class="wrap">
+<section class="contact" id="contact"><div class="wrap reveal">
   <h2>Ready to get started?</h2>
   <p class="sub">Send us a note about your brand and the plan you're interested in.</p>
-  <a class="btn" href="mailto:railcityai@gmail.com?subject=Rail%20City%20AI%20inquiry">Email us</a>
+  <a class="btn glow" href="mailto:railcityai@gmail.com?subject=Rail%20City%20AI%20inquiry">Email us</a>
 </div></section>
 </main>
 
 <footer><div class="wrap">
+  <div class="rail-divider small" aria-hidden="true"><span class="pulse"></span></div>
   <p>Rail City AI · Mailing address: 9169 W State St #4898, Garden City ID 83714 · <a href="tel:+15177971414">517-797-1414</a> · <a href="mailto:railcityai@gmail.com">railcityai@gmail.com</a></p>
-  <p>Rail City AI's spokesperson, Maya Hollis, is AI and is always disclosed as AI.</p>
+  <p>Rail City AI's spokesperson, Maya Hollis, is AI and is always disclosed as AI. Every presenter shown on this site is AI-generated and not a real person.</p>
   <p>Rail City AI is independent and not affiliated with any employer.</p>
   <p><a href="./">Home</a> · <a href="terms/">Terms</a> · <a href="privacy/">Privacy</a></p>
 </div></footer>
+<script src="assets/site.js" defer></script>
+<script src="assets/hero-cinematic.js" defer></script>
 </body>
 </html>
