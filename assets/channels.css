@@ -1,0 +1,40 @@
+/* Our Channels section. Fail-closed: hidden unless at least one .channel-card is on
+   (no `hidden` attribute). Browsers without :has() never show it. */
+/* The default hide rule (.channels-block,.nav-channels{display:none}) is inline in index.html <head>,
+   so the section stays hidden even if this file fails to load. */
+.channels-block:has(.channel-card:not([hidden])){display:block}
+html:has(.channel-card:not([hidden])) .nav-channels{display:list-item}
+.channel-card[hidden]{display:none!important}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.channels-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:22px;max-width:1100px;margin:0 auto}
+.channel-card{flex:1 1 240px;max-width:340px;min-width:0;display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .3s,box-shadow .3s}
+.channel-card:hover,.channel-card:focus-within{transform:translateY(-6px);border-color:rgba(34,211,238,.6);box-shadow:0 18px 40px rgba(0,0,0,.45),0 0 0 1px rgba(34,211,238,.25),var(--glow)}
+.ch-media{position:relative;aspect-ratio:16/9;overflow:hidden;background:#0d0f12}
+.ch-media img{width:100%;height:100%;object-fit:cover;display:block}
+.ch-media .ai-tag{z-index:1}
+.ch-placeholder{display:flex;align-items:center;justify-content:center;background:
+  linear-gradient(180deg,transparent 46%,rgba(34,211,238,.35) 47%,rgba(34,211,238,.35) 48%,transparent 49%),
+  radial-gradient(60% 80% at 30% 20%,rgba(34,211,238,.18),transparent 70%),
+  linear-gradient(135deg,var(--panel2),#0d0f12)}
+.ch-mono{font-family:var(--head);font-weight:700;font-size:2rem;letter-spacing:.14em;color:#c9d4e2;background:rgba(15,17,21,.7);padding:4px 14px;border-radius:10px}
+.ch-body{position:relative;padding:0 18px 18px;display:flex;flex-direction:column;flex:1}
+.ch-avatar{width:64px;height:64px;border-radius:50%;margin-top:-32px;margin-bottom:10px;border:3px solid var(--panel);object-fit:cover;display:block;position:relative;z-index:2;background:var(--panel2)}
+.ch-avatar-wrap{position:relative;display:block;width:64px;margin-top:-32px;margin-bottom:16px;z-index:2}
+.ch-avatar-wrap .ch-avatar{margin:0}
+.channel-card .ch-avatar-tag{position:absolute;left:50%;top:auto;bottom:-9px;transform:translateX(-50%);white-space:nowrap;font-size:.6rem;padding:2px 7px;z-index:3}
+.ch-avatar-ph{display:flex;align-items:center;justify-content:center;font-family:var(--head);font-weight:700;color:var(--accent);font-size:1.15rem;box-sizing:border-box}
+.ch-body h3{margin:0 0 2px;font-size:1.2rem}
+.ch-handle{margin:0 0 10px;font-size:.85rem;color:var(--steel)}
+.ch-desc{margin:0 0 12px;color:var(--muted);flex:1}
+.channel-card .label{margin-bottom:14px}
+.ch-link{align-self:flex-start}
+@media (max-width:520px){.ch-body{padding:0 14px 16px}.ch-body h3{font-size:1.1rem}}
+@media (prefers-reduced-motion: reduce){.channel-card{transition:none}.channel-card:hover,.channel-card:focus-within{transform:none}}
+/* Header with the extra "Channels" link (rules apply only when a channel is on; launch state untouched).
+   The 6 links need ~930px with the full-size brand, so: brand never shrinks under its wordmark;
+   861-959px hides the desktop link list (same as the existing <=860px behaviour); 960-1040px keeps
+   the links on one line with tighter padding; 1041px+ uses the normal nav. */
+@media (min-width:861px){html:has(.channel-card:not([hidden])) .brand{flex-shrink:0}}
+@media (min-width:861px) and (max-width:959px){html:has(.channel-card:not([hidden])) .nav-links{display:none}}
+@media (min-width:960px) and (max-width:1040px){html:has(.channel-card:not([hidden])) .nav-links a{white-space:nowrap;padding:8px 7px;font-size:.88rem}html:has(.channel-card:not([hidden])) header.nav .wrap{gap:12px}}
