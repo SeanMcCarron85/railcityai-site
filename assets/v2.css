@@ -42,6 +42,33 @@ header.nav .wrap{display:flex;align-items:center;gap:20px;padding-top:8px;paddin
 .nav-links a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.93rem;padding:8px 12px;border-radius:8px;transition:color .2s,background .2s}
 .nav-links a:hover{color:var(--ink);background:rgba(34,211,238,.08)}
 @media (max-width:860px){.nav-links{display:none}.brand .mark{height:38px}.wordmark{font-size:1.05rem}}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* Mobile menu: the toggle appears only with JS; without JS the header behaves as before */
+.nav-toggle{display:none;align-items:center;justify-content:center;width:44px;height:44px;padding:0;background:transparent;border:1px solid rgba(34,211,238,.45);border-radius:10px;color:var(--ink);cursor:pointer}
+.nav-toggle:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.nav-toggle-bars,.nav-toggle-bars::before,.nav-toggle-bars::after{display:block;width:20px;height:2px;border-radius:2px;background:currentColor;transition:transform .2s,background .2s}
+.nav-toggle-bars{position:relative}
+.nav-toggle-bars::before,.nav-toggle-bars::after{content:"";position:absolute;left:0}
+.nav-toggle-bars::before{top:-6px}.nav-toggle-bars::after{top:6px}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bars{background:transparent}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bars::before{transform:translateY(6px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bars::after{transform:translateY(-6px) rotate(-45deg)}
+.nav-cta{display:none}
+@media (max-width:860px){
+  html.js .nav-toggle{display:inline-flex}
+  header.nav nav{order:2}
+  .nav-btn{order:1}
+  html.js header.nav .wrap{gap:12px}
+  .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:2px;padding:10px 20px 18px;background:rgba(15,17,21,.97);border-bottom:1px solid var(--line);box-shadow:0 18px 40px rgba(0,0,0,.45)}
+  html.js header.nav.menu-open .nav-links{display:flex}
+  .nav-links a{display:block;padding:12px 14px;font-size:1rem}
+}
+@media (max-width:519px){
+  html.js .nav-btn{display:none}
+  html.js .nav-cta{display:list-item;margin-top:8px}
+  .nav-links .nav-cta a.btn,.nav-links .nav-cta a.btn:hover{display:block;text-align:center;color:var(--accent-ink);background:linear-gradient(135deg,#22d3ee,#38bdf8)}
+}
+@media (prefers-reduced-motion: reduce){.nav-toggle-bars,.nav-toggle-bars::before,.nav-toggle-bars::after{transition:none}}
 @media (max-width:360px){.wordmark{display:none}}
 
 /* Buttons */
@@ -156,6 +183,25 @@ html.js .reveal.in{opacity:1;transform:none}
 .pilot-card .center{margin-top:24px}
 .contact{text-align:center}
 .contact .sub{margin-bottom:28px}
+/* Contact form (sends through Formspree) */
+.contact-form{max-width:640px;margin:0 auto;text-align:left;display:grid;gap:16px}
+.cf-row{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+.cf-field{min-width:0}
+.cf-field label{display:block;font-weight:600;font-size:.92rem;margin-bottom:6px;color:var(--ink)}
+.cf-opt{color:var(--steel);font-weight:500}
+.contact-form input,.contact-form select,.contact-form textarea{width:100%;font:inherit;font-size:1rem;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;transition:border-color .2s,box-shadow .2s}
+.contact-form textarea{resize:vertical;min-height:130px}
+.contact-form select{appearance:none;-webkit-appearance:none;padding-right:40px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%2322d3ee' stroke-width='2'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.contact-form select option{background:var(--panel);color:var(--ink)}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(34,211,238,.25)}
+.contact-form [aria-invalid="true"]{border-color:#f87171}
+.contact-form button.btn{justify-self:center;font-family:inherit;font-size:1rem;cursor:pointer;min-width:200px}
+.contact-form button.btn[disabled]{opacity:.65;cursor:progress;transform:none}
+.cf-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.cf-status{margin:0;text-align:center;min-height:1.6em;color:var(--muted)}
+.cf-status.err{color:#fca5a5}
+.cf-alt{margin:22px auto 0;max-width:640px;color:var(--muted);font-size:.92rem}
+@media (max-width:560px){.cf-row{grid-template-columns:1fr}.contact-form button.btn{justify-self:stretch}}
 
 footer{padding:34px 0 30px;text-align:center;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line);background:rgba(15,17,21,.7)}
 footer a{color:var(--accent)}

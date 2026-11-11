@@ -12,3 +12,55 @@
     io.observe(e);
   });
 })();
+
+/* Mobile menu */
+(function(){
+  var header=document.querySelector('header.nav'),btn=header&&header.querySelector('.nav-toggle');
+  if(!btn)return;
+  function set(open){header.classList.toggle('menu-open',open);btn.setAttribute('aria-expanded',open?'true':'false');}
+  btn.addEventListener('click',function(){set(btn.getAttribute('aria-expanded')!=='true');});
+  header.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&header.classList.contains('menu-open')){set(false);btn.focus();}});
+  document.addEventListener('click',function(e){if(header.classList.contains('menu-open')&&!header.contains(e.target))set(false);});
+  window.addEventListener('resize',function(){if(getComputedStyle(btn).display==='none')set(false);},{passive:true});
+})();
+
+/* Contact form: sends through Formspree, then shows the thank-you page */
+(function(){
+  var form=document.querySelector('.contact-form');if(!form)return;
+  var status=form.querySelector('.cf-status'),submit=form.querySelector('button[type="submit"]');
+  var EMAIL='railcityai@gmail.com';
+  function say(msg,err){status.textContent=msg;status.classList.toggle('err',!!err);}
+  function check(){
+    var bad=null;
+    form.querySelectorAll('[required]').forEach(function(f){
+      var ok=f.value.trim()!==''&&(f.type!=='email'||/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value.trim()));
+      f.setAttribute('aria-invalid',ok?'false':'true');
+      if(!ok&&!bad)bad=f;
+    });
+    return bad;
+  }
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var bad=check();
+    if(bad){say(bad.type==='email'&&bad.value.trim()?'Please enter a valid email address.':'Please fill in your name, email and a short message.',true);bad.focus();return;}
+    var data=new FormData(form);
+    // Not connected to Formspree yet: open the visitor's email app with the message filled in
+    if(form.action.indexOf('YOUR_FORM_ID')!==-1){
+      var body='Name: '+data.get('name')+'\nEmail: '+data.get('email')+'\nBusiness: '+(data.get('business')||'')+'\nInterested in: '+data.get('plan')+'\n\n'+data.get('message');
+      window.location.href='mailto:'+EMAIL+'?subject='+encodeURIComponent('Rail City AI inquiry')+'&body='+encodeURIComponent(body);
+      return;
+    }
+    submit.disabled=true;say('Sending...');
+    fetch(form.action,{method:'POST',body:data,headers:{'Accept':'application/json'}})
+      .then(function(r){
+        if(r.ok){window.location.href=form.getAttribute('data-thanks')||'thank-you/';return;}
+        throw new Error('send failed');
+      })
+      .catch(function(){
+        submit.disabled=false;
+        say('Sorry, your message didn’t send. Please try again, or email us at '+EMAIL+'.',true);
+      });
+  });
+  form.addEventListener('input',function(e){if(e.target.getAttribute('aria-invalid')==='true')e.target.setAttribute('aria-invalid','false');});
+})();

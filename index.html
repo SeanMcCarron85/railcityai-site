@@ -34,16 +34,18 @@
     <span class="wordmark">RAIL CITY <span>AI</span></span>
   </a>
   <nav aria-label="Main">
-    <ul class="nav-links">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"><span class="nav-toggle-bars" aria-hidden="true"></span><span class="sr-only">Menu</span></button>
+    <ul class="nav-links" id="nav-menu">
       <li><a href="#presenters">Presenters</a></li>
       <li><a href="#how">How it works</a></li>
       <li><a href="#samples">Samples</a></li>
-      <li class="nav-channels"><a href="#channels">Channels</a></li>
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#pilot">Free pilot</a></li>
+      <li class="nav-channels"><a href="#channels">Channels</a></li>
+      <li class="nav-cta"><a class="btn small glow" href="#contact">Get started</a></li>
     </ul>
   </nav>
-  <a class="btn small glow" href="#pricing">Get started</a>
+  <a class="btn small glow nav-btn" href="#contact">Get started</a>
 </div></header>
 
 <main id="main">
@@ -60,8 +62,7 @@
     <div class="cine-content">
       <div class="hero-intro">
         <h1><span class="l1">One studio.</span> <span class="l2 grad">Every stop.</span></h1>
-        <p>We make short videos that tell your story today, with websites and AI agents coming soon to the same line.</p>
-        <p class="studio-line">Rail City AI is an AI studio: short-form video now, with websites and AI agents coming soon.</p>
+        <p>Rail City AI is an AI studio. We make short videos that tell your story today, with websites and AI agents coming soon to the same line.</p>
       </div>
       <div class="cine-logo-wrap"><img class="cine-logo" src="assets/hero-cine/logo-cine.webp" alt="Rail City AI logo" width="1100" height="528"></div>
       <div class="hero-end">
@@ -126,7 +127,7 @@
     </article>
   </div>
   <div class="choose reveal">
-    <p><strong>Ask about our AI presenter styles, or get a custom avatar of your own likeness.</strong> A custom avatar is a one-time $100 on Starter ($250 total), +$100/mo on the Growth plan, and included in the $600 Done-for-You plan. It's made only with your signed consent to use your face and voice, and it isn't available in the free pilot. <a href="#pricing">See pricing</a></p>
+    <p><strong>Ask about our AI presenter styles, or get a custom avatar of your own likeness.</strong> A custom avatar is made only with your signed consent to use your face and voice, and it isn't available in the free pilot. <a href="#pricing">See avatar pricing</a></p>
   </div>
 </div></section>
 
@@ -182,63 +183,6 @@
   </div>
   <p class="samples-note">These businesses, names, phone numbers and links are made up. Maya Hollis is an AI spokesperson, not a real person, and every scene is AI-generated.</p>
 </div></section>
-
-<div class="channels-block">
-<div class="rail-divider" aria-hidden="true"><span class="pulse"></span></div>
-<section id="channels" class="channels" aria-labelledby="channels-h"><div class="wrap">
-  <div class="section-head reveal">
-    <p class="kicker">Our channels</p>
-    <h2 id="channels-h">Watch our channels</h2>
-    <p class="sub">Our own YouTube channels. Every host and narrator is an AI character by Rail City AI.</p>
-  </div>
-  <div class="channels-grid">
-    <article class="channel-card reveal" data-channel="owen" hidden>
-      <div class="ch-media ch-placeholder" aria-hidden="true"><span class="ch-mono">OTD</span></div>
-      <div class="ch-body">
-        <div class="ch-avatar ch-avatar-ph" aria-hidden="true">O</div>
-        <h3>Owen Tech Desk</h3>
-        <p class="ch-handle">@OwenTechDesk · YouTube</p>
-        <p class="ch-desc">Plain-English gadgets, AI tips, PC builds and 3D printing.</p>
-        <span class="label">Owen is an AI character by Rail City AI.</span>
-        <a class="btn small ghost ch-link" href="https://www.youtube.com/@OwenTechDesk" target="_blank" rel="noopener noreferrer">Watch on YouTube<span class="sr-only"> (Owen Tech Desk, opens in a new tab)</span></a>
-      </div>
-    </article>
-    <article class="channel-card reveal" data-channel="nell" hidden>
-      <div class="ch-media"><img src="channels/nell-banner.webp" alt="Nell, an AI character, studying an old brass alarm clock in a workroom" width="800" height="450" loading="lazy"><span class="ai-tag">AI character</span></div>
-      <div class="ch-body">
-        <span class="ch-avatar-wrap"><img class="ch-avatar" src="channels/nell-profile.webp" alt="" width="192" height="192" loading="lazy"><span class="ai-tag ch-avatar-tag">AI character</span></span>
-        <h3>Nell Explains</h3>
-        <p class="ch-handle">@nellexplains · YouTube</p>
-        <p class="ch-desc">Short videos on the surprising origins of everyday things and words.</p>
-        <span class="label">Nell is an AI character by Rail City AI.</span>
-        <a class="btn small ghost ch-link" href="https://www.youtube.com/@nellexplains" target="_blank" rel="noopener noreferrer">Watch on YouTube<span class="sr-only"> (Nell Explains, opens in a new tab)</span></a>
-      </div>
-    </article>
-    <article class="channel-card reveal" data-channel="engpostmortem" hidden>
-      <div class="ch-media ch-placeholder" aria-hidden="true"><span class="ch-mono">EP</span></div>
-      <div class="ch-body">
-        <div class="ch-avatar ch-avatar-ph" aria-hidden="true">EP</div>
-        <h3>Engineering Postmortem</h3>
-        <p class="ch-handle">@engpostmortem · YouTube</p>
-        <p class="ch-desc">Engineering failures and near-misses, explained in plain English, and what changed because of them.</p>
-        <span class="label">Narrated by an AI character by Rail City AI.</span>
-        <a class="btn small ghost ch-link" href="https://www.youtube.com/@engpostmortem" target="_blank" rel="noopener noreferrer">Watch on YouTube<span class="sr-only"> (Engineering Postmortem, opens in a new tab)</span></a>
-      </div>
-    </article>
-    <article class="channel-card reveal" data-channel="evidence-line" hidden>
-      <div class="ch-media"><img src="channels/evidence-line-banner.webp" alt="The Evidence Line channel banner: the wordmark beside an amber question mark" width="800" height="450" loading="lazy"></div>
-      <div class="ch-body">
-        <img class="ch-avatar" src="channels/evidence-line-profile.webp" alt="" width="192" height="192" loading="lazy">
-        <h3>The Evidence Line</h3>
-        <p class="ch-handle">@EvidenceLineFiles · YouTube</p>
-        <p class="ch-desc">Real American mysteries, with the evidence and the theories kept apart.</p>
-        <span class="label">Narrated by an AI character by Rail City AI.</span>
-        <a class="btn small ghost ch-link" href="https://www.youtube.com/@EvidenceLineFiles" target="_blank" rel="noopener noreferrer">Watch on YouTube<span class="sr-only"> (The Evidence Line, opens in a new tab)</span></a>
-      </div>
-    </article>
-  </div>
-</div></section>
-</div>
 
 <div class="rail-divider" aria-hidden="true"><span class="pulse"></span></div>
 
@@ -318,9 +262,89 @@
 
 <section class="contact" id="contact"><div class="wrap reveal">
   <h2>Ready to get started?</h2>
-  <p class="sub">Send us a note about your brand and the plan you're interested in.</p>
-  <a class="btn glow" href="mailto:railcityai@gmail.com?subject=Rail%20City%20AI%20inquiry">Email us</a>
+  <p class="sub">Tell us about your brand and the plan you're interested in, and we'll reply by email.</p>
+  <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-thanks="thank-you/" novalidate>
+    <div class="cf-row">
+      <div class="cf-field"><label for="cf-name">Your name</label><input id="cf-name" name="name" type="text" autocomplete="name" required></div>
+      <div class="cf-field"><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" autocomplete="email" required></div>
+    </div>
+    <div class="cf-row">
+      <div class="cf-field"><label for="cf-business">Business name <span class="cf-opt">(optional)</span></label><input id="cf-business" name="business" type="text" autocomplete="organization"></div>
+      <div class="cf-field"><label for="cf-plan">Interested in</label>
+        <select id="cf-plan" name="plan">
+          <option value="Not sure yet">Not sure yet</option>
+          <option value="Starter">Starter</option>
+          <option value="Growth">Growth</option>
+          <option value="Done-for-You">Done-for-You</option>
+          <option value="Free pilot">Free pilot</option>
+        </select>
+      </div>
+    </div>
+    <div class="cf-field"><label for="cf-message">Tell us about your brand</label><textarea id="cf-message" name="message" rows="5" required></textarea></div>
+    <input type="hidden" name="_subject" value="Rail City AI website inquiry">
+    <div class="cf-hp" aria-hidden="true"><label for="cf-gotcha">Leave this empty</label><input id="cf-gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+    <button class="btn glow" type="submit">Send message</button>
+    <p class="cf-status" role="status" aria-live="polite"></p>
+  </form>
+  <p class="cf-alt">Prefer email? Write to <a href="mailto:railcityai@gmail.com?subject=Rail%20City%20AI%20inquiry">railcityai@gmail.com</a>. See our <a href="privacy/">Privacy Policy</a> for how we handle your information.</p>
 </div></section>
+
+<div class="channels-block">
+<div class="rail-divider" aria-hidden="true"><span class="pulse"></span></div>
+<section id="channels" class="channels" aria-labelledby="channels-h"><div class="wrap">
+  <div class="section-head reveal">
+    <p class="kicker">Our channels</p>
+    <h2 id="channels-h">Watch our channels</h2>
+    <p class="sub">Our own YouTube channels. Every host and narrator is an AI character by Rail City AI.</p>
+  </div>
+  <div class="channels-grid">
+    <article class="channel-card reveal" data-channel="owen" hidden>
+      <div class="ch-media ch-placeholder" aria-hidden="true"><span class="ch-mono">OTD</span></div>
+      <div class="ch-body">
+        <div class="ch-avatar ch-avatar-ph" aria-hidden="true">O</div>
+        <h3>Owen Tech Desk</h3>
+        <p class="ch-handle">@OwenTechDesk · YouTube</p>
+        <p class="ch-desc">Plain-English gadgets, AI tips, PC builds and 3D printing.</p>
+        <span class="label">Owen is an AI character by Rail City AI.</span>
+        <a class="btn small ghost ch-link" href="https://www.youtube.com/@OwenTechDesk" target="_blank" rel="noopener noreferrer">Watch on YouTube<span class="sr-only"> (Owen Tech Desk, opens in a new tab)</span></a>
+      </div>
+    </article>
+    <article class="channel-card reveal" data-channel="nell" hidden>
+      <div class="ch-media"><img src="channels/nell-banner.webp" alt="Nell, an AI character, studying an old brass alarm clock in a workroom" width="800" height="450" loading="lazy"><span class="ai-tag">AI character</span></div>
+      <div class="ch-body">
+        <span class="ch-avatar-wrap"><img class="ch-avatar" src="channels/nell-profile.webp" alt="" width="192" height="192" loading="lazy"><span class="ai-tag ch-avatar-tag">AI character</span></span>
+        <h3>Nell Explains</h3>
+        <p class="ch-handle">@nellexplains · YouTube</p>
+        <p class="ch-desc">Short videos on the surprising origins of everyday things and words.</p>
+        <span class="label">Nell is an AI character by Rail City AI.</span>
+        <a class="btn small ghost ch-link" href="https://www.youtube.com/@nellexplains" target="_blank" rel="noopener noreferrer">Watch on YouTube<span class="sr-only"> (Nell Explains, opens in a new tab)</span></a>
+      </div>
+    </article>
+    <article class="channel-card reveal" data-channel="engpostmortem" hidden>
+      <div class="ch-media ch-placeholder" aria-hidden="true"><span class="ch-mono">EP</span></div>
+      <div class="ch-body">
+        <div class="ch-avatar ch-avatar-ph" aria-hidden="true">EP</div>
+        <h3>Engineering Postmortem</h3>
+        <p class="ch-handle">@engpostmortem · YouTube</p>
+        <p class="ch-desc">Engineering failures and near-misses, explained in plain English, and what changed because of them.</p>
+        <span class="label">Narrated by an AI character by Rail City AI.</span>
+        <a class="btn small ghost ch-link" href="https://www.youtube.com/@engpostmortem" target="_blank" rel="noopener noreferrer">Watch on YouTube<span class="sr-only"> (Engineering Postmortem, opens in a new tab)</span></a>
+      </div>
+    </article>
+    <article class="channel-card reveal" data-channel="evidence-line" hidden>
+      <div class="ch-media"><img src="channels/evidence-line-banner.webp" alt="The Evidence Line channel banner: the wordmark beside an amber question mark" width="800" height="450" loading="lazy"></div>
+      <div class="ch-body">
+        <img class="ch-avatar" src="channels/evidence-line-profile.webp" alt="" width="192" height="192" loading="lazy">
+        <h3>The Evidence Line</h3>
+        <p class="ch-handle">@EvidenceLineFiles · YouTube</p>
+        <p class="ch-desc">Real American mysteries, with the evidence and the theories kept apart.</p>
+        <span class="label">Narrated by an AI character by Rail City AI.</span>
+        <a class="btn small ghost ch-link" href="https://www.youtube.com/@EvidenceLineFiles" target="_blank" rel="noopener noreferrer">Watch on YouTube<span class="sr-only"> (The Evidence Line, opens in a new tab)</span></a>
+      </div>
+    </article>
+  </div>
+</div></section>
+</div>
 </main>
 
 <footer><div class="wrap">

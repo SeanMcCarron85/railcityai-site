@@ -26,7 +26,7 @@
 .cine-cue,.cine-skip{display:none}
 
 /* ---- animated mode ---- */
-html.cine-on .hero.cine{height:420vh;margin-top:-66px;--logo:0;--end:0;--cue:1}
+html.cine-on .hero.cine{height:320vh;margin-top:-66px;--logo:0;--end:0;--cue:1}
 html.cine-on .cine-stage{position:sticky;top:0;height:100vh;height:100svh;min-height:0}
 html.cine-on .cine-still{display:none}
 html.cine-on .cine-canvas{display:block}
@@ -47,7 +47,7 @@ html.cine-on .cine-done .cine-skip{opacity:0;pointer-events:none}
 html.cine-on .cine-loadbar{display:block;position:absolute;z-index:5;left:0;top:0;height:2px;width:calc(var(--loaded,0) * 100%);
   background:linear-gradient(90deg,transparent,#22d3ee);opacity:calc(1 - var(--loaded,0));transition:width .3s,opacity .6s}
 @media (max-width:700px){
-  html.cine-on .hero.cine{height:330vh}
+  html.cine-on .hero.cine{height:250vh}
   .cine-logo{width:100%;max-width:none;max-height:34svh}
   html.cine-on .cine-skip{right:10px;bottom:16px;font-size:.7rem;padding:8px 11px}
   html.cine-on .cine-cue{bottom:20px;letter-spacing:.2em}
