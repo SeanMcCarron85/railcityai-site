@@ -44,22 +44,22 @@
     e.preventDefault();
     var bad=check();
     if(bad){say(bad.type==='email'&&bad.value.trim()?'Please enter a valid email address.':'Please fill in your name, email and a short message.',true);bad.focus();return;}
-    var data=new FormData(form);
-    // Not connected to Formspree yet: open the visitor's email app with the message filled in
-    if(form.action.indexOf('YOUR_FORM_ID')!==-1){
-      var body='Name: '+data.get('name')+'\nEmail: '+data.get('email')+'\nBusiness: '+(data.get('business')||'')+'\nInterested in: '+data.get('plan')+'\n\n'+data.get('message');
-      window.location.href='mailto:'+EMAIL+'?subject='+encodeURIComponent('Rail City AI inquiry')+'&body='+encodeURIComponent(body);
-      return;
-    }
     submit.disabled=true;say('Sending...');
-    fetch(form.action,{method:'POST',body:data,headers:{'Accept':'application/json'}})
+    fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
       .then(function(r){
         if(r.ok){window.location.href=form.getAttribute('data-thanks')||'thank-you/';return;}
-        throw new Error('send failed');
+        return r.json().catch(function(){return {};}).then(function(d){
+          // Formspree explains rejected fields in d.errors: [{field, message}]
+          var errs=(d&&d.errors)||[],first=null;
+          errs.forEach(function(er){var f=er.field&&form.querySelector('[name="'+er.field+'"]');if(f){f.setAttribute('aria-invalid','true');if(!first)first=f;}});
+          submit.disabled=false;
+          if(errs.length){say(errs.map(function(er){return er.message;}).join(' ')+' You can also email us at '+EMAIL+'.',true);if(first)first.focus();}
+          else throw new Error('send failed');
+        });
       })
       .catch(function(){
         submit.disabled=false;
-        say('Sorry, your message didn’t send. Please try again, or email us at '+EMAIL+'.',true);
+        say('Sorry, your message didn\u2019t send. Please try again, or email us at '+EMAIL+'.',true);
       });
   });
   form.addEventListener('input',function(e){if(e.target.getAttribute('aria-invalid')==='true')e.target.setAttribute('aria-invalid','false');});
