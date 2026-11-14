@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Main Street Mane Salon (sample website)</title>
+<link rel="icon" type="image/png" href="/assets/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Karla:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../sample-kit.css">
+<style>
+:root{--plum:#3b1d3a;--champagne:#f3dfc1;--sage:#9bb7a4;--blush:#f7ece6;--ink:#2a1429;--gold:#c9965a}
+*{box-sizing:border-box}
+body{margin:0;font-family:Karla,system-ui,sans-serif;color:var(--ink);background:var(--blush);line-height:1.6}
+h1,h2,h3{font-family:Syne,sans-serif;font-weight:800;line-height:1;margin:0}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+header{background:var(--plum);color:var(--champagne)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding:18px 22px}
+.logo{font-family:Syne;font-weight:800;font-size:1.3rem;color:var(--champagne);text-decoration:none}
+header a.book{color:var(--plum);background:var(--champagne);padding:9px 18px;border-radius:999px;text-decoration:none;font-weight:600}
+.hero{background:var(--plum);color:var(--champagne);padding:20px 0 0;overflow:hidden}
+.hero h1{font-size:clamp(4rem,15vw,11rem);letter-spacing:-.04em;line-height:.85}
+.hero h1 .l2{display:block;padding-left:12vw;color:var(--sage)}
+.hero .sub{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:end;padding:26px 0 40px}
+.hero .sub p{max-width:38ch;margin:0;font-size:1.1rem}
+.btn{display:inline-block;padding:13px 24px;border-radius:999px;background:var(--gold);color:var(--plum);font-weight:600;text-decoration:none;border:0;font:inherit;cursor:pointer}
+section{padding:70px 0}
+h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:10px;color:var(--plum)}
+.lede{max-width:52ch;margin:0 0 26px}
+/* Service menu with next openings: the memorable piece */
+.menu{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:start}
+.svc{width:100%;display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:16px 4px;background:none;border:0;border-bottom:1px solid rgba(59,29,58,.2);font:inherit;color:inherit;text-align:left;cursor:pointer}
+.svc b{font-family:Syne;font-size:1.25rem}
+.svc span{white-space:nowrap}
+.svc small{display:block;color:#7a5e78}
+.svc[aria-pressed="true"] b{color:#7a4a12;text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:5px;text-decoration-color:var(--gold)}
+.slots{background:var(--plum);color:var(--champagne);border-radius:24px;padding:24px;position:sticky;top:60px}
+.slots h3{font-size:1.4rem;margin-bottom:4px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+.chip{border:1px solid var(--champagne);color:var(--champagne);background:none;border-radius:999px;padding:8px 14px;font:inherit;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--champagne);color:var(--plum)}
+.out{min-height:1.5em;color:var(--sage);font-weight:600}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.person{background:#fff;border-radius:24px;padding:22px}
+.av{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-family:Syne;font-weight:800;font-size:1.3rem;color:#fff;margin-bottom:12px}
+.person h3{font-size:1.2rem}
+.person p{margin:6px 0 0;color:#5a4458}
+.visit{background:var(--sage);color:var(--ink)}
+footer{padding:24px 0;font-size:.9rem;color:#6b5469}
+@media (max-width:780px){.menu,.team{grid-template-columns:1fr}.slots{position:static}}
+</style>
+</head>
+<body>
+<div class="rc-ribbon"><strong>Sample website by Rail City AI.</strong> Main Street Mane is a made-up business. <a href="../">Back to all samples</a></div>
+<header><div class="wrap"><a class="logo" href="#">Main Street Mane</a><a class="book" href="#menu">Book online</a></div></header>
+
+<div class="hero"><div class="wrap">
+  <h1>Main<span class="l2">Street Mane</span></h1>
+  <div class="sub"><p>Cuts, color and blowouts in downtown Owosso. Walk-ins welcome, and online booking that shows real openings.</p><a class="btn" href="#menu">See open times</a></div>
+</div></div>
+
+<section id="menu"><div class="wrap">
+  <h2>Pick a service, see who's free</h2>
+  <p class="lede">Choose a service and the next openings show up. No phone tag.</p>
+  <div class="menu">
+    <div role="group" aria-label="Services">
+      <button class="svc" data-s="Women's cut" data-t='["Today 4:30 with Ana","Tomorrow 10:00 with Ruth","Thu 1:15 with Ana"]' aria-pressed="true"><span><b>Women's cut</b><small>45 min, includes wash and style</small></span><span>$38</span></button>
+      <button class="svc" data-s="Men's cut" data-t='["Today 3:45 with Jess","Today 5:15 with Jess","Tomorrow 9:30 with Ruth"]' aria-pressed="false"><span><b>Men's cut</b><small>30 min, hot towel finish</small></span><span>$24</span></button>
+      <button class="svc" data-s="Color and gloss" data-t='["Tomorrow 1:00 with Ruth","Fri 10:30 with Ana"]' aria-pressed="false"><span><b>Color and gloss</b><small>2 hr, all-over color</small></span><span>$95</span></button>
+      <button class="svc" data-s="Highlights" data-t='["Fri 9:00 with Ruth","Sat 11:00 with Ana"]' aria-pressed="false"><span><b>Highlights</b><small>2.5 hr, partial or full</small></span><span>from $110</span></button>
+      <button class="svc" data-s="Blowout" data-t='["Today 4:00 with Jess","Tomorrow 2:30 with Jess","Thu 11:00 with Ana"]' aria-pressed="false"><span><b>Blowout</b><small>40 min, event ready</small></span><span>$35</span></button>
+    </div>
+    <div class="slots" aria-live="polite">
+      <h3 id="sn">Women's cut</h3><span>Next openings</span>
+      <div class="chips" id="chips"></div>
+      <button class="btn" id="bk">Book this time</button>
+      <p class="out" id="out"></p>
+      <p class="rc-sample-form-note">Sample booking. Times are made up and nothing is booked.</p>
+    </div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <h2>The chairs</h2>
+  <div class="team">
+    <div class="person"><div class="av" style="background:#3b1d3a">AR</div><h3>Ana</h3><p>Color and lived-in blondes.</p></div>
+    <div class="person"><div class="av" style="background:#c9965a">RT</div><h3>Ruth</h3><p>Precision cuts and curly hair.</p></div>
+    <div class="person"><div class="av" style="background:#6f9a7d">JM</div><h3>Jess</h3><p>Fades, beards and quick blowouts.</p></div>
+  </div>
+</div></section>
+
+<section class="visit"><div class="wrap">
+  <h2 style="color:var(--ink)">Find the chair</h2>
+  <p>Tue to Fri 9:00 am to 7:00 pm, Saturday 8:00 am to 2:00 pm. Downtown Owosso, street parking out front. Call or text <a href="tel:+19895550129" style="color:var(--ink);font-weight:600">(989) 555-0129</a>.</p>
+</div></section>
+
+<footer><div class="wrap">Main Street Mane is a fictional business. Stylists are made-up names, and prices and phone numbers are made up. Sample website built by Rail City AI.</div></footer>
+<script>
+let pick='';
+function show(b){document.querySelectorAll('.svc').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');sn.textContent=b.dataset.s;out.textContent='';
+chips.innerHTML='';JSON.parse(b.dataset.t).forEach((t,i)=>{const c=document.createElement('button');c.className='chip';c.textContent=t;c.setAttribute('aria-pressed',i===0);if(i===0)pick=t;c.onclick=()=>{chips.querySelectorAll('.chip').forEach(z=>z.setAttribute('aria-pressed','false'));c.setAttribute('aria-pressed','true');pick=t;};chips.appendChild(c);});}
+document.querySelectorAll('.svc').forEach(b=>b.addEventListener('click',()=>show(b)));
+show(document.querySelector('.svc'));
+bk.onclick=()=>{out.textContent='Booked (sample only): '+sn.textContent+', '+pick+'.';};
+</script>
+</body>
+</html>

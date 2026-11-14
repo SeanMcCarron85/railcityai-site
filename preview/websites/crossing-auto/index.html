@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Crossing Auto Repair (sample website)</title>
+<link rel="icon" type="image/png" href="/assets/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;800&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../sample-kit.css">
+<style>
+:root{--asphalt:#1d1f21;--road:#2a2d30;--hazard:#ffc400;--white:#f7f7f5;--steel:#9aa1a8;--red:#ff4d3d}
+*{box-sizing:border-box}
+body{margin:0;font-family:Barlow,system-ui,sans-serif;background:var(--asphalt);color:var(--white);line-height:1.55}
+h1,h2,h3{font-family:"Saira Condensed",sans-serif;font-weight:800;line-height:.95;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding:16px 22px}
+.logo{display:flex;align-items:center;gap:10px;font-family:"Saira Condensed";font-weight:800;font-size:1.6rem;color:var(--white);text-decoration:none}
+.xing{width:34px;height:34px}
+.call{font-family:"Saira Condensed";font-weight:800;font-size:1.3rem;color:var(--asphalt);background:var(--hazard);padding:8px 16px;text-decoration:none;border-radius:3px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--hazard);outline-offset:3px}
+.hero{position:relative;padding:60px 0 70px;background:linear-gradient(90deg,var(--asphalt) 45%,rgba(29,31,33,.2)),url(../img/crossing-dash.webp) right center/auto 100% no-repeat}
+.stripe{height:14px;background:repeating-linear-gradient(-45deg,var(--hazard) 0 18px,var(--asphalt) 18px 36px)}
+.hero h1{font-size:clamp(3rem,8vw,6.2rem);max-width:11ch;text-transform:uppercase}
+.hero p{max-width:40ch;font-size:1.15rem;color:#d7dadd;margin:18px 0 26px}
+.btn{display:inline-block;padding:13px 22px;font-weight:600;text-decoration:none;border-radius:3px;border:2px solid var(--hazard);color:var(--white)}
+.btn.solid{background:var(--hazard);color:var(--asphalt)}
+section{padding:70px 0}
+h2{font-size:clamp(2.2rem,5vw,3.4rem);text-transform:uppercase;margin-bottom:10px}
+.lede{color:var(--steel);max-width:52ch;margin:0 0 28px}
+/* Dash lights: the memorable piece */
+.dash{background:#0e0f10;border-radius:18px;padding:26px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;border:1px solid #33373b}
+.lights{display:grid;grid-template-columns:repeat(2,88px);gap:14px}
+.light{width:88px;height:88px;border-radius:50%;border:2px solid #3a3f44;background:#151719;display:grid;place-items:center;cursor:pointer;color:#5b6168;transition:color .2s,box-shadow .2s,border-color .2s}
+.light svg{width:44px;height:44px}
+.light[aria-pressed="true"]{color:var(--hazard);border-color:var(--hazard);box-shadow:0 0 22px rgba(255,196,0,.45)}
+.light.red[aria-pressed="true"]{color:var(--red);border-color:var(--red);box-shadow:0 0 22px rgba(255,77,61,.45)}
+.readout h3{font-size:2rem;text-transform:uppercase}
+.urgency{display:inline-block;margin:8px 0 10px;padding:3px 10px;border-radius:3px;font-weight:600;font-size:.9rem}
+.urgency.soon{background:var(--hazard);color:var(--asphalt)}.urgency.now{background:var(--red);color:var(--white)}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#33373b;border:2px solid #33373b}
+.svc{background:var(--road);padding:22px}
+.svc h3{font-size:1.5rem;text-transform:uppercase;color:var(--hazard)}
+.svc p{margin:6px 0 0;color:#cfd3d6}
+.request{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+form{display:grid;gap:12px;background:var(--road);padding:24px;border-radius:6px}
+label{font-weight:600;font-size:.95rem;display:grid;gap:4px}
+input,select,textarea{font:inherit;padding:10px 12px;border-radius:3px;border:1px solid #4a5056;background:#17191b;color:var(--white)}
+button[type=submit]{font:inherit;font-weight:600;padding:13px;border:0;border-radius:3px;background:var(--hazard);color:var(--asphalt);cursor:pointer}
+.out{color:var(--hazard);font-weight:600;min-height:1.5em}
+video{width:100%;max-width:280px;border-radius:12px;background:#000;display:block}
+footer{border-top:1px solid #33373b;padding:24px 0;color:var(--steel);font-size:.9rem}
+@media (max-width:780px){.dash,.request{grid-template-columns:1fr}.services{grid-template-columns:1fr}.hero{background:linear-gradient(180deg,rgba(29,31,33,.75),var(--asphalt)),url(../img/crossing-dash.webp) center/cover}.lights{grid-template-columns:repeat(4,1fr)}.light{width:68px;height:68px}.light svg{width:34px;height:34px}}
+</style>
+</head>
+<body>
+<div class="rc-ribbon"><strong>Sample website by Rail City AI.</strong> Crossing Auto Repair is a made-up business. <a href="../">Back to all samples</a></div>
+<header><div class="wrap">
+  <a class="logo" href="#"><svg class="xing" viewBox="0 0 40 40" aria-hidden="true"><g stroke="#ffc400" stroke-width="6" stroke-linecap="round"><path d="M6 6l28 28M34 6L6 34"/></g></svg>Crossing Auto Repair</a>
+  <a class="call" href="tel:+19895550177">(989) 555-0177</a>
+</div></header>
+<div class="stripe" aria-hidden="true"></div>
+
+<div class="hero"><div class="wrap">
+  <h1>Light on? Pull in. We'll tell you straight.</h1>
+  <p>Honest diagnostics, brakes and everyday repair. Free code scan while you wait, and we text you photos before we fix anything.</p>
+  <a class="btn solid" href="#request">Request a repair</a> <a class="btn" href="#lights">What's that light?</a>
+</div></div>
+
+<section id="lights"><div class="wrap">
+  <h2>What's that light?</h2>
+  <p class="lede">Tap the light on your dash. We'll tell you how worried to be.</p>
+  <div class="dash">
+    <div class="lights" role="group" aria-label="Dashboard warning lights">
+      <button class="light" data-k="engine" aria-pressed="true" aria-label="Check engine light"><svg viewBox="0 0 48 48" fill="currentColor"><path d="M10 18h6v-4h12v4h4l4 4h4v-4h4v14h-4v-4h-4v6H20l-4-4h-6v-4H6v6H2V18h4v4h4z"/></svg></button>
+      <button class="light red" data-k="oil" aria-pressed="false" aria-label="Oil pressure light"><svg viewBox="0 0 48 48" fill="currentColor"><path d="M6 20h10l4-4h10l10-4 4 3-10 9-4 8H14l-4-6H6zM42 30c0 3-2 5-4 5s-4-2-4-5 4-8 4-8 4 5 4 8z"/></svg></button>
+      <button class="light red" data-k="brake" aria-pressed="false" aria-label="Brake warning light"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="4"><circle cx="24" cy="24" r="11"/><path d="M10 12a18 18 0 0 0 0 24M38 12a18 18 0 0 1 0 24"/><path d="M24 18v7" stroke-linecap="round"/><circle cx="24" cy="30" r="1.5" fill="currentColor"/></svg></button>
+      <button class="light" data-k="battery" aria-pressed="false" aria-label="Battery charging light"><svg viewBox="0 0 48 48" fill="currentColor"><path d="M6 14h36v24H6zm4 4v16h28V18zM12 10h6v4h-6zm18 0h6v4h-6zm-16 15h8v3h-8zm16-3h3v3h3v3h-3v3h-3v-3h-3v-3h3z"/></svg></button>
+    </div>
+    <div class="readout" aria-live="polite">
+      <h3 id="lt">Check engine</h3><span class="urgency soon" id="lu">Book this week</span>
+      <p id="ld">Could be a loose gas cap or a sensor. If it's steady, drive gently and bring it in. If it's flashing, stop driving and call us.</p>
+    </div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <h2>What we fix</h2>
+  <div class="services">
+    <div class="svc"><h3>Diagnostics</h3><p>Free code scan. Real answer in plain English.</p></div>
+    <div class="svc"><h3>Brakes</h3><p>Pads, rotors and lines. Photos before any work.</p></div>
+    <div class="svc"><h3>Oil and tires</h3><p>In and out in under an hour most days.</p></div>
+  </div>
+</div></section>
+
+<section id="request"><div class="wrap request">
+  <div>
+    <h2>Request a repair</h2>
+    <p class="lede">Tell us what's going on. We'll text back a time slot, usually within the hour during shop hours.</p>
+    <video controls playsinline preload="none" poster="/samples/reel2-crossing-auto-poster.jpg" aria-label="Sample reel for Crossing Auto Repair, a fictional auto shop"><source src="/samples/reel2-crossing-auto.mp4" type="video/mp4"></video>
+  </div>
+  <form id="f">
+    <label>Your name<input name="n" required autocomplete="name"></label>
+    <label>Mobile number<input name="p" type="tel" required autocomplete="tel"></label>
+    <label>Vehicle<input name="v" placeholder="2016 Ford Escape"></label>
+    <label>What's happening?<select name="w"><option>Warning light</option><option>Brakes or noise</option><option>Oil change</option><option>Something else</option></select></label>
+    <label>Details<textarea name="d" rows="3"></textarea></label>
+    <button type="submit">Send repair request</button>
+    <p class="out" id="out" aria-live="polite"></p>
+    <p class="rc-sample-form-note">This is a sample form. Nothing is sent.</p>
+  </form>
+</div></section>
+
+<footer><div class="wrap">Crossing Auto Repair is a fictional business. Phone numbers use the 555 test range. Sample website built by Rail City AI.</div></footer>
+<script>
+const info={engine:['Check engine','soon','Book this week','Could be a loose gas cap or a sensor. If it’s steady, drive gently and bring it in. If it’s flashing, stop driving and call us.'],
+oil:['Oil pressure','now','Stop driving','Low oil pressure can ruin an engine in minutes. Pull over, shut it off and call us for a tow.'],
+brake:['Brake warning','now','Call us today','Check the parking brake first. If it stays on, your brake fluid may be low. Don’t put this one off.'],
+battery:['Battery charging','soon','Book this week','Your alternator or battery may be failing. You might have a few days, or a few miles. We test both free.']};
+document.querySelectorAll('.light').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.light').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');const [t,u,ul,d]=info[b.dataset.k];lt.textContent=t;lu.className='urgency '+u;lu.textContent=ul;ld.textContent=d;}));
+f.addEventListener('submit',e=>{e.preventDefault();out.textContent='Repair request sent (sample only). We’d text you back with a time.';});
+</script>
+</body>
+</html>
