@@ -6,6 +6,7 @@
 <title>AI Video Reels for Your Brand | Rail City AI Video Studio</title>
 <meta name="description" content="Rail City AI makes AI-labeled short-form video reels for your brand. Plans from $150, a 14-day delivery guarantee, and a free video pilot.">
 <link rel="canonical" href="https://railcityai.com/video/">
+<meta property="og:site_name" content="Rail City AI">
 <meta property="og:title" content="Rail City AI Video Studio: AI-labeled short-form reels for your brand">
 <meta property="og:description" content="Short-form AI video reels for your brand. Plans from $150 with a 14-day delivery guarantee.">
 <meta property="og:type" content="website">
@@ -17,19 +18,22 @@
 <link rel="icon" type="image/png" href="/assets/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" sizes="180x180">
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/space-grotesk-latin-700-normal.woff2" crossorigin>
-<link rel="preload" as="image" href="/assets/hero-cine/d/f001.webp" type="image/webp" media="(min-width: 701px)" fetchpriority="high">
-<link rel="preload" as="image" href="/assets/hero-cine/m/f001.webp" type="image/webp" media="(max-width: 700px)" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-latin-wght-normal.woff2" crossorigin>
+<link rel="preload" as="image" href="/video/maya-welcome-poster.jpg" fetchpriority="high">
 <link rel="stylesheet" href="/assets/v2.css">
 <link rel="stylesheet" href="/assets/hero-cinematic.css">
-<style>.channels-block,.nav-channels{display:none}@media (min-width:861px){.nav-links a{white-space:nowrap;padding:8px 9px}}</style>
+<link rel="stylesheet" href="/assets/home.css">
+<link rel="stylesheet" href="/assets/pages.css">
+<link rel="stylesheet" href="/assets/video.css">
+<style>.channels-block,.nav-channels{display:none}</style>
 <link rel="stylesheet" href="/assets/channels.css">
 </head>
-<body>
+<body class="home">
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="bg-fx" aria-hidden="true"></div>
 
 <header class="nav"><div class="wrap">
-  <a class="brand" href="/video/" aria-label="Rail City AI home">
+  <a class="brand" href="/" aria-label="Rail City AI home">
     <img class="mark" src="/assets/header-mark.webp" alt="" width="240" height="104">
     <span class="wordmark">RAIL CITY <span>AI</span></span>
   </a>
@@ -37,69 +41,131 @@
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"><span class="nav-toggle-bars" aria-hidden="true"></span><span class="sr-only">Menu</span></button>
     <ul class="nav-links" id="nav-menu">
       <li><a href="/">Automation</a></li>
-      <li><a href="#presenters">Presenters</a></li>
-      <li><a href="#how">How it works</a></li>
-      <li><a href="#samples">Samples</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#pilot">Free video pilot</a></li>
+      <li><a href="/agents/">AI agents</a></li>
+      <li><a href="/websites/">Websites</a></li>
+      <li><a href="/video/" aria-current="page">Video</a></li>
+      <li><a href="/pricing/">Pricing</a></li>
       <li class="nav-channels"><a href="#channels">Channels</a></li>
-      <li class="nav-cta"><a class="btn small glow" href="#contact">Get started</a></li>
+      <li class="nav-cta"><a class="btn small glow" href="#pilot">Claim a free pilot spot</a></li>
     </ul>
   </nav>
-  <a class="btn small glow nav-btn" href="#contact">Get started</a>
+  <a class="btn small glow nav-btn" href="#pilot">Claim a free pilot spot</a>
 </div></header>
 
 <main id="main">
-<section class="hero cine" id="top" aria-label="Rail City AI" data-frames="/assets/hero-cine/">
-  <div class="cine-stage">
-    <picture class="cine-still" aria-hidden="true">
-      <source media="(max-width: 700px)" srcset="/assets/hero-cine/final-m.webp">
-      <img src="/assets/hero-cine/final-d.webp" alt="" width="1280" height="720">
-    </picture>
-    <canvas class="cine-canvas" aria-hidden="true"></canvas>
-    <div class="cine-shade" aria-hidden="true"></div>
-    <div class="cine-flash" aria-hidden="true"></div>
-    <div class="cine-loadbar" aria-hidden="true"></div>
-    <div class="cine-content">
-      <div class="hero-intro">
-        <h1><span class="l1">One studio.</span> <span class="l2 grad">Every stop.</span></h1>
-        <p>Rail City AI is an AI studio. This is our video studio. We make short, AI-labeled videos that tell your story. Looking for workflow automation? <a href="/">Start on the main line</a>.</p>
-      </div>
-      <div class="cine-logo-wrap"><img class="cine-logo" src="/assets/hero-cine/logo-cine.webp" alt="Rail City AI logo" width="1100" height="528"></div>
-      <div class="hero-end">
-        <div class="cta-row">
-          <a class="btn glow" href="#contact">Start your first reels</a>
-          <a class="btn ghost" href="#samples">See sample work</a>
-        </div>
-      </div>
+<section class="v-hero" id="top" aria-labelledby="hero-h"><div class="wrap v-grid">
+  <div class="v-copy">
+    <p class="crumb"><a href="/">Rail City AI</a> / Video studio</p>
+    <h1 id="hero-h">Short videos for your business, <span class="grad">without a camera crew.</span></h1>
+    <p class="h-lede">We write, produce and deliver AI-labeled reels for Instagram, TikTok and YouTube Shorts. You approve every script. Press play and let Maya explain.</p>
+    <div class="cta-row">
+      <a class="btn glow" href="#pilot">Claim a free pilot spot</a>
+      <a class="btn ghost" href="#samples">Watch sample reels</a>
     </div>
-    <span class="ai-tag cine-ai-tag">AI-generated visuals</span>
-    <div class="cine-cue" aria-hidden="true">Scroll<i></i></div>
-    <a class="cine-skip" href="#maya">Skip intro</a>
+    <p class="v-offer"><b>Free video pilot: 5 spots.</b> Two free reels in exchange for a required honest review, which does not have to be positive.</p>
+    <ul class="h-facts" aria-label="Video studio at a glance">
+      <li><b>$150</b><span>plans start here</span></li>
+      <li><b>14 days</b><span>delivery guarantee</span></li>
+      <li><b>100%</b><span>labeled as AI</span></li>
+      <li><b>0</b><span>long-term contracts</span></li>
+    </ul>
   </div>
-</section>
+  <figure class="maya-player" id="maya">
+    <div class="mp-frame">
+      <video playsinline preload="none" poster="/video/maya-welcome-poster.jpg" width="720" height="1280" aria-label="Welcome video from Maya Hollis, Rail City AI's AI spokesperson">
+        <source src="/video/maya-welcome.mp4" type="video/mp4">
+        <track kind="captions" src="/video/maya-welcome.vtt" srclang="en" label="English" default>
+      </video>
+      <span class="ai-tag">AI-generated</span>
+      <button class="mp-play" type="button"><span class="ring" aria-hidden="true"></span><b>Play Maya's welcome</b><span class="t">18 seconds, sound on</span></button>
+    </div>
+    <figcaption><b>Maya Hollis, our spokesperson</b>Maya is AI-generated, not a real person.</figcaption>
+  </figure>
+</div></section>
 
 <div class="rail-divider" aria-hidden="true"><span class="pulse"></span></div>
 
-<section id="maya" class="maya"><div class="wrap maya-grid reveal">
-  <figure class="maya-photo">
-    <img src="/maya-hollis.jpg" alt="Maya Hollis, Rail City AI's AI spokesperson" width="447" height="800" loading="lazy">
-    <span class="ai-tag">AI-generated</span>
-  </figure>
-  <div class="maya-copy">
-    <p class="kicker">Our spokesperson</p>
-    <h2>Meet Maya Hollis.</h2>
-    <p class="lead">Maya is Rail City AI's spokesperson. She's AI-generated, not a real person, and she's here to help local businesses tell their story.</p>
-    <p class="muted">Every reel we make carries a visible AI label. Our presenters never pose as real employees or customers.</p>
-    <a class="btn ghost" href="#presenters">Meet the other presenters</a>
+<section id="samples" aria-labelledby="samples-h"><div class="wrap">
+  <div class="section-head reveal">
+    <p class="kicker">See the style</p>
+    <h2 id="samples-h">Sample work</h2>
+    <p class="sub">Three short sample reels we made for made-up local businesses, so you can see the style before you buy.</p>
+  </div>
+  <div class="samples">
+    <figure class="sample reveal">
+      <video controls playsinline preload="none" poster="/samples/reel1-depot-grind-poster.jpg" width="1080" height="1920" aria-label="Sample reel: Depot Grind, a fictional coffee shop">
+        <source src="/samples/reel1-depot-grind.mp4" type="video/mp4">
+      </video>
+      <figcaption>Depot Grind: a morning coffee ad for a made-up coffee shop.<span class="label">Sample for a fictional business. AI-generated.</span></figcaption>
+    </figure>
+    <figure class="sample reveal">
+      <video controls playsinline preload="none" poster="/samples/reel2-crossing-auto-poster.jpg" width="1080" height="1920" aria-label="Sample reel: Crossing Auto Repair, a fictional auto shop">
+        <source src="/samples/reel2-crossing-auto.mp4" type="video/mp4">
+      </video>
+      <figcaption>Crossing Auto Repair: a check-engine-light ad for a made-up auto shop.<span class="label">Sample for a fictional business. AI-generated.</span></figcaption>
+    </figure>
+    <figure class="sample reveal">
+      <video controls playsinline preload="none" poster="/samples/reel3-shiawassee-paws-poster.jpg" width="1080" height="1920" aria-label="Sample reel: Shiawassee Paws Grooming, a fictional pet groomer">
+        <source src="/samples/reel3-shiawassee-paws.mp4" type="video/mp4">
+      </video>
+      <figcaption>Shiawassee Paws: a spa-day ad for a made-up dog groomer.<span class="label">Sample for a fictional business. AI-generated.</span></figcaption>
+    </figure>
+  </div>
+  <p class="samples-note">These businesses, names, phone numbers and links are made up. Maya Hollis is an AI spokesperson, not a real person, and every scene is AI-generated.</p>
+</div></section>
+
+<section id="script" aria-labelledby="script-h"><div class="wrap">
+  <div class="section-head reveal">
+    <p class="kicker">Reel script simulator</p>
+    <h2 id="script-h">See a reel script for a business like yours</h2>
+    <p class="sub">Pick your kind of business and type its name. This is the three-shot shape most of our reels follow.</p>
+  </div>
+  <div class="panel sim reel-sim reveal" id="reel-sim">
+    <div class="sim-top"><span><span class="dot"></span>Reel script: 20 seconds, 3 shots</span><span class="simtag">Simulation</span></div>
+    <div class="sim-body">
+      <div class="sim-main rs-controls">
+        <label for="rs-name">Your business name (optional)</label>
+        <input id="rs-name" type="text" maxlength="40" autocomplete="off" placeholder="Example: Depot Grind">
+        <label id="rs-type-l">Kind of business</label>
+        <div class="picks" role="group" aria-labelledby="rs-type-l"></div>
+        <a class="btn glow" href="#pilot">Get two reels made free</a>
+      </div>
+      <div class="rs-out" aria-live="polite"></div>
+    </div>
+    <p class="sim-foot">Simulation built from templates, not written by a live AI model. Real scripts are written for your business, and nothing is produced until you approve it. Nothing you type is sent or stored.</p>
   </div>
 </div></section>
 
-<section id="presenters"><div class="wrap">
+<section id="how" aria-labelledby="how-h"><div class="wrap">
+  <div class="section-head reveal">
+    <p class="kicker">The process</p>
+    <h2 id="how-h">How it works</h2>
+    <p class="sub">A simple process from idea to finished video.</p>
+  </div>
+  <div class="steps">
+    <div class="card step reveal"><div class="step-num">1</div><h3>Tell us about your brand</h3><p>Share your goals, audience, and any topics you want covered.</p></div>
+    <div class="card step reveal"><div class="step-num">2</div><h3>Approve the script</h3><p>We draft scripts for your reels. You review and approve before production starts.</p></div>
+    <div class="card step reveal"><div class="step-num">3</div><h3>Get your reels</h3><p>We produce the videos and deliver them ready to post.</p></div>
+  </div>
+</div></section>
+
+<section class="track-band" id="right-track" aria-labelledby="right-track-h"><div class="wrap reveal">
+  <span class="track-line" aria-hidden="true"></span>
+  <h2 id="right-track-h">Your brand, <span class="grad">on the right track.</span></h2>
+  <p>Tell us about your business, approve every script, and get reels ready to post on the platforms you already use.</p>
+  <a class="btn ghost" href="#samples">See sample work</a>
+</div></section>
+
+
+<section id="presenters" aria-labelledby="presenters-h"><div class="wrap">
   <div class="section-head reveal">
     <p class="kicker">Presenter styles</p>
-    <h2>Meet our AI presenters</h2>
+    <h2 id="presenters-h">Meet our AI presenters</h2>
     <p class="sub">Maya is our main spokesperson. Ask about other presenter styles for your reels.</p>
+  </div>
+  <div class="meet reveal">
+    <p class="lead">Meet Maya Hollis. Maya is Rail City AI's spokesperson. She's AI-generated, not a real person, and she's here to help local businesses tell their story.</p>
+    <p>Every reel we make carries a visible AI label. Our presenters never pose as real employees or customers.</p>
   </div>
   <div class="presenters">
     <article class="presenter reveal" tabindex="0">
@@ -132,65 +198,40 @@
   </div>
 </div></section>
 
-<div class="rail-divider" aria-hidden="true"><span class="pulse"></span></div>
-
-<section id="how"><div class="wrap">
-  <div class="section-head reveal">
-    <p class="kicker">The process</p>
-    <h2>How it works</h2>
-    <p class="sub">A simple process from idea to finished video.</p>
+<section class="hero cine" id="top" aria-label="Rail City AI studio intro animation" data-frames="/assets/hero-cine/">
+  <div class="cine-stage">
+    <picture class="cine-still" aria-hidden="true">
+      <source media="(max-width: 700px)" srcset="/assets/hero-cine/final-m.webp">
+      <img src="/assets/hero-cine/final-d.webp" alt="" width="1280" height="720">
+    </picture>
+    <canvas class="cine-canvas" aria-hidden="true"></canvas>
+    <div class="cine-shade" aria-hidden="true"></div>
+    <div class="cine-flash" aria-hidden="true"></div>
+    <div class="cine-loadbar" aria-hidden="true"></div>
+    <div class="cine-content">
+      <div class="hero-intro">
+        <h2><span class="l1">One studio.</span> <span class="l2 grad">Every stop.</span></h2>
+        <p>Rail City AI is an AI studio. This is our video studio. We make short, AI-labeled videos that tell your story. Looking for workflow automation? <a href="/">Start on the main line</a>.</p>
+      </div>
+      <div class="cine-logo-wrap"><img class="cine-logo" src="/assets/hero-cine/logo-cine.webp" alt="Rail City AI logo" width="1100" height="528"></div>
+      <div class="hero-end">
+        <div class="cta-row">
+          <a class="btn glow" href="#pilot">Claim a free pilot spot</a>
+          <a class="btn ghost" href="#pricing">See video plans</a>
+        </div>
+      </div>
+    </div>
+    <span class="ai-tag cine-ai-tag">AI-generated visuals</span>
+    <div class="cine-cue" aria-hidden="true">Scroll<i></i></div>
+    <a class="cine-skip" href="#pricing">Skip animation</a>
   </div>
-  <div class="steps">
-    <div class="card step reveal"><div class="step-num">1</div><h3>Tell us about your brand</h3><p>Share your goals, audience, and any topics you want covered.</p></div>
-    <div class="card step reveal"><div class="step-num">2</div><h3>Approve the script</h3><p>We draft scripts for your reels. You review and approve before production starts.</p></div>
-    <div class="card step reveal"><div class="step-num">3</div><h3>Get your reels</h3><p>We produce the videos and deliver them ready to post.</p></div>
-  </div>
-</div></section>
+</section>
 
-<section class="track-band" id="right-track" aria-labelledby="right-track-h"><div class="wrap reveal">
-  <span class="track-line" aria-hidden="true"></span>
-  <h2 id="right-track-h">Your brand, <span class="grad">on the right track.</span></h2>
-  <p>Tell us about your business, approve every script, and get reels ready to post on the platforms you already use.</p>
-  <a class="btn ghost" href="#samples">See sample work</a>
-</div></section>
 
-<div class="rail-divider" aria-hidden="true"><span class="pulse"></span></div>
-
-<section id="samples"><div class="wrap">
-  <div class="section-head reveal">
-    <p class="kicker">See the style</p>
-    <h2>Sample work</h2>
-    <p class="sub">Three short sample reels we made for made-up local businesses, so you can see the style before you buy.</p>
-  </div>
-  <div class="samples">
-    <figure class="sample reveal">
-      <video controls playsinline preload="none" poster="/samples/reel1-depot-grind-poster.jpg" width="1080" height="1920" aria-label="Sample reel: Depot Grind, a fictional coffee shop">
-        <source src="/samples/reel1-depot-grind.mp4" type="video/mp4">
-      </video>
-      <figcaption>Depot Grind: a morning coffee ad for a made-up coffee shop.<span class="label">Sample for a fictional business. AI-generated.</span></figcaption>
-    </figure>
-    <figure class="sample reveal">
-      <video controls playsinline preload="none" poster="/samples/reel2-crossing-auto-poster.jpg" width="1080" height="1920" aria-label="Sample reel: Crossing Auto Repair, a fictional auto shop">
-        <source src="/samples/reel2-crossing-auto.mp4" type="video/mp4">
-      </video>
-      <figcaption>Crossing Auto Repair: a check-engine-light ad for a made-up auto shop.<span class="label">Sample for a fictional business. AI-generated.</span></figcaption>
-    </figure>
-    <figure class="sample reveal">
-      <video controls playsinline preload="none" poster="/samples/reel3-shiawassee-paws-poster.jpg" width="1080" height="1920" aria-label="Sample reel: Shiawassee Paws Grooming, a fictional pet groomer">
-        <source src="/samples/reel3-shiawassee-paws.mp4" type="video/mp4">
-      </video>
-      <figcaption>Shiawassee Paws: a spa-day ad for a made-up dog groomer.<span class="label">Sample for a fictional business. AI-generated.</span></figcaption>
-    </figure>
-  </div>
-  <p class="samples-note">These businesses, names, phone numbers and links are made up. Maya Hollis is an AI spokesperson, not a real person, and every scene is AI-generated.</p>
-</div></section>
-
-<div class="rail-divider" aria-hidden="true"><span class="pulse"></span></div>
-
-<section id="pricing"><div class="wrap">
+<section id="pricing" aria-labelledby="pricing-h"><div class="wrap">
   <div class="section-head reveal">
     <p class="kicker">Plans</p>
-    <h2>Pricing</h2>
+    <h2 id="pricing-h">Pricing</h2>
     <p class="sub">Pick the plan that fits how often you want to post.</p>
   </div>
   <div class="tiers">
@@ -251,6 +292,7 @@
   </ul>
 </div></section>
 
+
 <section id="pilot"><div class="wrap">
   <div class="pilot-card reveal">
     <p class="kicker">Limited</p>
@@ -258,6 +300,24 @@
     <p class="sub">Get 2 free reels in exchange for a required honest testimonial. It doesn't have to be positive.</p>
     <p class="addon">Pilot reels use our AI spokesperson or AI voiceover only, with no custom avatar. The guarantee doesn't apply to the pilot. Any testimonial we publish will note that you received free reels in exchange for your honest review.</p>
     <p class="center"><a class="btn glow" href="mailto:railcityai@gmail.com?subject=Free%20pilot">Apply for the pilot</a></p>
+  </div>
+</div></section>
+
+
+<section id="faq" aria-labelledby="faq-h"><div class="wrap">
+  <div class="section-head reveal">
+    <p class="kicker">Video questions</p>
+    <h2 id="faq-h">What owners ask before they start</h2>
+  </div>
+  <div class="faq reveal">
+    <details><summary>Will people know the videos are AI?</summary><p>Yes, and that is on purpose. Every reel carries a visible AI label on screen and in the caption, and we turn on each platform's AI-content setting. Our presenters never pose as real employees or customers, and we do not make fake testimonials or reviews.</p></details>
+    <details><summary>What does the free video pilot cost me?</summary><p>Nothing. You get 2 free reels in exchange for a required honest testimonial, and it does not have to be positive. There are 5 spots. Pilot reels use our AI spokesperson or AI voiceover, and any testimonial we publish notes that you received free reels.</p></details>
+    <details><summary>What if I do not like the script?</summary><p>Nothing is produced until you approve the script. We draft it, you review it, and production starts only after you say yes.</p></details>
+    <details><summary>What if you miss the deadline?</summary><p>On paid packages, your first 2 videos arrive within 14 days of an approved script or you get your first payment back. The full terms are in the guarantee section above.</p></details>
+    <details><summary>Who owns the reels?</summary><p>You do, once the package is paid in full. We may keep copies for our portfolio unless you opt out in writing.</p></details>
+    <details><summary>Can the presenter be me instead of Maya?</summary><p>Yes. A custom avatar of your own likeness is a $100 add-on, included in the Done-for-You plan, and is made only with your signed consent to use your face and voice. It is not available in the free pilot.</p></details>
+    <details><summary>How long is a reel and where can I post it?</summary><p>A reel is one finished vertical video, 15 to 60 seconds long, delivered ready to post on the platforms you already use, such as Instagram Reels, TikTok and YouTube Shorts.</p></details>
+    <details><summary>Am I locked into a contract?</summary><p>No. Starter is a one-time purchase. Monthly plans renew each month until you cancel by email, and the cancellation and refund rules are listed under the plans above.</p></details>
   </div>
 </div></section>
 
@@ -289,6 +349,7 @@
   </form>
   <p class="cf-alt">Prefer email? Write to <a href="mailto:railcityai@gmail.com?subject=Rail%20City%20AI%20inquiry">railcityai@gmail.com</a>. See our <a href="/privacy/">Privacy Policy</a> for how we handle your information.</p>
 </div></section>
+
 
 <div class="channels-block">
 <div class="rail-divider" aria-hidden="true"><span class="pulse"></span></div>
@@ -348,14 +409,21 @@
 </div>
 </main>
 
+<div class="pilot-bar" aria-hidden="true"><div class="wrap">
+  <p><b>Free video pilot: 5 spots.</b> <span>Two free reels for an honest review.</span></p>
+  <a class="btn small glow" href="#pilot" tabindex="-1">Claim a spot</a>
+  <button class="x" type="button" aria-label="Hide this bar" tabindex="-1">&times;</button>
+</div></div>
+
 <footer><div class="wrap">
   <div class="rail-divider small" aria-hidden="true"><span class="pulse"></span></div>
-  <p>Rail City AI · Mailing address: 9169 W State St #4898, Garden City ID 83714 · <a href="tel:+15177971414">517-797-1414</a> · <a href="mailto:railcityai@gmail.com">railcityai@gmail.com</a></p>
+  <p>Rail City AI, LLC · Durand, Michigan · Mailing address: 9169 W State St #4898, Garden City ID 83714 · <a href="tel:+15177971414">517-797-1414</a> · <a href="mailto:railcityai@gmail.com">railcityai@gmail.com</a></p>
   <p>Rail City AI's spokesperson, Maya Hollis, is AI and is always disclosed as AI. Every presenter shown on this site is AI-generated and not a real person.</p>
   <p>Rail City AI is independent and not affiliated with any employer.</p>
-  <p><a href="/">Home</a> · <a href="/agents/">AI agents</a> · <a href="/websites/">Websites</a> · <a href="/showcase/">Live demo</a> · <a href="/pricing/">Pricing</a> · <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a></p>
+  <p><a href="/">Home</a> · <a href="/agents/">AI agents</a> · <a href="/websites/">Websites</a> · <a href="/video/">Video studio</a> · <a href="/showcase/">Live demo</a> · <a href="/pricing/">Pricing</a> · <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a></p>
 </div></footer>
 <script src="/assets/site.js" defer></script>
 <script src="/assets/hero-cinematic.js" defer></script>
+<script src="/assets/video.js" defer></script>
 </body>
 </html>
