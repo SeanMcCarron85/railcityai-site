@@ -81,6 +81,18 @@ body.home .bg-fx::after{opacity:.5;background-image:
 @keyframes logIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .schem-foot{margin:0;padding:8px 16px;border-top:1px solid var(--hair);font-size:.74rem;color:var(--steel)}
 
+
+/* ---------- Lineup: everything we build ---------- */
+.lineup{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.line{display:flex;flex-direction:column;gap:6px}
+.line-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px}
+.st{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:3px 9px;border:1px solid var(--hair-2);white-space:nowrap}
+.st.ok{color:var(--ok);border-color:rgba(52,211,153,.45)}
+.st.wn{color:var(--warn);border-color:rgba(251,191,36,.45)}
+.line-price{margin-top:12px !important;font-family:var(--mono);font-size:.84rem;color:var(--ink) !important}
+.line.soon{border-style:dashed}
+.fineprint a{color:var(--accent)}
+
 /* ---------- Solutions bento ---------- */
 .bento{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
 .bento .panel{display:flex;flex-direction:column;gap:6px}
@@ -146,7 +158,10 @@ html.js .ind{animation:panelIn .3s ease-out}
 .road .cost{display:inline-block;margin-bottom:8px;font-family:var(--mono);font-size:.74rem;color:var(--ok);letter-spacing:.06em;text-transform:uppercase}
 
 /* ---------- Pricing ---------- */
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:stretch}
+.plans .price{font-size:2.2rem}
+.plans .price small{display:block;margin-top:2px}
+.plans .panel{padding:24px}
 .plan{display:flex;flex-direction:column}
 .plan.feat{border-color:rgba(34,211,238,.55);box-shadow:0 0 0 1px rgba(34,211,238,.2),0 24px 60px rgba(34,211,238,.1)}
 .plan .price{font-size:2.6rem}
@@ -187,7 +202,8 @@ html.js .ind{animation:panelIn .3s ease-out}
 @media (max-width:960px){
   .h-grid,.proof,.area,.book{grid-template-columns:1fr}
   .bento .b1,.bento .b2,.bento .b3,.bento .b4{grid-column:span 6}
-  .plans{grid-template-columns:1fr}
+  .plans{grid-template-columns:1fr 1fr}
+  .lineup{grid-template-columns:1fr 1fr}
   .road{grid-template-columns:1fr 1fr;row-gap:32px}
   .road::before{display:none}
   .ind-cols{grid-template-columns:1fr}
@@ -199,6 +215,7 @@ html.js .ind{animation:panelIn .3s ease-out}
   .h-hero{padding:44px 0 48px !important}
   .h-facts{grid-template-columns:1fr 1fr}
   .road{grid-template-columns:1fr}
+  .plans,.lineup{grid-template-columns:1fr}
   .proof,.panel{padding:22px}
   .schem,.ind{padding:0}
   .tabs{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin}
