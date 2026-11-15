@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Corunna Creek Plumbing (sample website)</title>
+<link rel="icon" type="image/png" href="/assets/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../sample-kit.css">
+<style>
+:root{--navy:#0b2545;--orange:#ff6a13;--pipe:#d6dde5;--white:#fff;--slate:#4d6178;--water:#2f80c2}
+*{box-sizing:border-box}
+body{margin:0;font-family:Archivo,system-ui,sans-serif;color:var(--navy);background:var(--white);line-height:1.55}
+h1,h2,h3{font-weight:900;line-height:1;margin:0;letter-spacing:-.02em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.oncall{background:var(--orange);color:var(--navy);font-weight:800}
+.oncall .wrap{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:space-between;padding:10px 22px}
+.oncall a{color:var(--navy);font-size:1.25rem;font-weight:900;text-decoration:none}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--navy);margin-right:8px;animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.25}}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding:18px 22px}
+.logo{font-weight:900;font-size:1.35rem;text-decoration:none;color:var(--navy);display:flex;gap:10px;align-items:center}
+.logo svg{width:36px;height:36px}
+nav a{margin-left:18px;color:var(--slate);text-decoration:none;font-weight:600}
+.hero{background:var(--navy);color:var(--white);position:relative;overflow:hidden}
+.hero .wrap{padding:70px 22px 80px;position:relative;z-index:1}
+.hero h1{font-size:clamp(2.8rem,7.5vw,5.6rem);max-width:13ch}
+.hero p{max-width:44ch;font-size:1.15rem;color:var(--pipe);margin:18px 0 28px}
+.pipes{position:absolute;right:-40px;top:0;height:100%;opacity:.9}
+.btn{display:inline-block;font-weight:800;padding:14px 22px;border-radius:6px;text-decoration:none;border:2px solid var(--orange);color:var(--white)}
+.btn.solid{background:var(--orange);color:var(--navy)}
+section{padding:72px 0}
+h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:10px}
+.lede{color:var(--slate);max-width:54ch;margin:0 0 30px}
+/* Photo-quote steps: a real sequence, so numbers are earned */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;counter-reset:s;border-top:4px solid var(--navy)}
+.step{padding:22px 22px 0 0;position:relative}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--orange);font-weight:900;font-size:1.3rem;margin-top:-47px;margin-bottom:14px;border:4px solid var(--white)}
+.step h3{font-size:1.4rem;margin-bottom:6px}
+.step p{margin:0;color:var(--slate)}
+.photo-form{margin-top:40px;background:#f2f5f8;border-radius:10px;padding:24px;display:grid;grid-template-columns:1fr 1fr auto;gap:12px;align-items:end}
+label{display:grid;gap:4px;font-weight:600;font-size:.95rem}
+input,textarea{font:inherit;padding:11px 12px;border:1px solid #b8c3cf;border-radius:6px;background:#fff}
+button{font:inherit;font-weight:800;padding:12px 20px;border:0;border-radius:6px;background:var(--navy);color:#fff;cursor:pointer}
+.out{grid-column:1/-1;margin:0;font-weight:700;color:var(--water);min-height:1.4em}
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.svc div{border:2px solid var(--pipe);border-radius:10px;padding:18px}
+.svc h3{font-size:1.15rem;margin-bottom:6px}
+.svc p{margin:0;color:var(--slate);font-size:.95rem}
+.area{background:var(--navy);color:var(--white)}
+.towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.towns span{border:1px solid var(--slate);padding:6px 14px;border-radius:999px}
+footer{padding:24px 0;color:var(--slate);font-size:.9rem}
+@media (max-width:820px){.steps,.svc{grid-template-columns:1fr}.steps{border-top:0}.step{padding:0 0 0 62px;margin-bottom:22px}.step::before{position:absolute;left:0;top:0;margin:0;border:0}.photo-form{grid-template-columns:1fr}nav{display:none}.pipes{opacity:.25}}
+</style>
+</head>
+<body>
+<div class="rc-ribbon"><strong>Sample website by Rail City AI.</strong> Corunna Creek Plumbing is a made-up business. <a href="../">Back to all samples</a></div>
+<div class="oncall"><div class="wrap"><span><span class="dot" aria-hidden="true"></span>A plumber is on call right now, 24/7</span><a href="tel:+19895550118">(989) 555-0118</a></div></div>
+<header><div class="wrap">
+  <a class="logo" href="#"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3C14 12 8 18 8 25a12 12 0 0 0 24 0c0-7-6-13-12-22z" fill="#2f80c2"/><path d="M14 26a6 6 0 0 0 6 6" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/></svg>Corunna Creek Plumbing</a>
+  <nav aria-label="Main"><a href="#quote">Photo quote</a><a href="#services">Services</a><a href="#area">Service area</a></nav>
+</div></header>
+
+<div class="hero">
+  <svg class="pipes" viewBox="0 0 400 500" aria-hidden="true" preserveAspectRatio="xMaxYMid slice"><g fill="none" stroke="#1d4a7d" stroke-width="34" stroke-linecap="round"><path d="M420 60H260v140H120v320"/><path d="M420 330H320v190"/></g><g fill="none" stroke="#ff6a13" stroke-width="10"><path d="M246 182h28M106 300h28"/></g></svg>
+  <div class="wrap">
+    <h1>Water where it shouldn't be?</h1>
+    <p>Leaks, clogs, water heaters and sump pumps across Shiawassee County. Text us a photo and get a ballpark price before anyone drives out.</p>
+    <a class="btn solid" href="#quote">Get a photo quote</a> <a class="btn" href="tel:+19895550118">Call now</a>
+  </div>
+</div>
+
+<section id="quote"><div class="wrap">
+  <h2>Get a price from a photo</h2>
+  <p class="lede">Most small jobs can be priced from a picture. Here's how it works.</p>
+  <div class="steps">
+    <div class="step"><h3>Snap the problem</h3><p>The drip, the puddle, the label on the water heater.</p></div>
+    <div class="step"><h3>We text a ballpark</h3><p>Usually within an hour during the day, with a price range.</p></div>
+    <div class="step"><h3>Pick a time</h3><p>Reply with a time that works. We confirm and send a reminder.</p></div>
+  </div>
+  <form class="photo-form" id="f">
+    <label>Mobile number<input type="tel" required autocomplete="tel"></label>
+    <label>Photo of the problem<input type="file" accept="image/*"></label>
+    <button type="submit">Send photo</button>
+    <p class="out" id="out" aria-live="polite"></p>
+    <p class="rc-sample-form-note" style="grid-column:1/-1;margin:0">This is a sample form. Nothing is sent or uploaded.</p>
+  </form>
+</div></section>
+
+<section id="services" style="padding-top:0"><div class="wrap">
+  <h2>What we handle</h2>
+  <div class="svc">
+    <div><h3>Leaks and drips</h3><p>Faucets, supply lines, under-sink surprises.</p></div>
+    <div><h3>Clogs</h3><p>Kitchen, bath and main lines with camera inspection.</p></div>
+    <div><h3>Water heaters</h3><p>Repair or same-week replacement, tank or tankless.</p></div>
+    <div><h3>Sump pumps</h3><p>Spring-ready checks and battery backups.</p></div>
+  </div>
+</div></section>
+
+<section class="area" id="area"><div class="wrap">
+  <h2>Where we go</h2>
+  <p style="color:var(--pipe);max-width:50ch">Based in Corunna, with no trip charge inside these towns.</p>
+  <div class="towns"><span>Corunna</span><span>Owosso</span><span>Durand</span><span>Bancroft</span><span>Vernon</span><span>Lennon</span><span>Byron</span><span>Perry</span></div>
+</div></section>
+
+<footer><div class="wrap">Corunna Creek Plumbing is a fictional business. Phone numbers use the 555 test range. Sample website built by Rail City AI.</div></footer>
+<script>f.addEventListener('submit',e=>{e.preventDefault();out.textContent='Photo sent (sample only). We’d text a ballpark price within the hour.';});</script>
+</body>
+</html>
