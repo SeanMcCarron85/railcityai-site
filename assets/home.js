@@ -74,3 +74,35 @@
   }else start();
   document.addEventListener('visibilitychange',sync);
 })();
+
+/* Hero departure board: example workflows shown as station departures. Decorative (aria-hidden). */
+(function(){
+  var list=document.querySelector('.board-rows');if(!list)return;
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var RUNS=[
+    ['INVOICE PDF > LEDGER','ON TIME','ok'],
+    ['MISSED CALL > SMS REPLY','ON TIME','ok'],
+    ['BLURRY SCAN > HUMAN REVIEW','HELD','wn'],
+    ['RFQ PDF > QUOTE SHEET','BOARDING','go'],
+    ['BILL OF LADING > MISMATCH CHECK','ON TIME','ok'],
+    ['VENDOR API 503 > RETRY 2 OF 3','DELAYED','wn'],
+    ['SOP QUESTION > MANUAL VAULT','ON TIME','ok'],
+    ['CLIENT UPLOAD > STATUS TRACKER','BOARDING','go'],
+    ['AFTER-HOURS CALL > ON-CALL TECH','ON TIME','ok']
+  ];
+  var now=new Date(),mins=now.getHours()*60+now.getMinutes(),i=0,timer=null,inView=true;
+  function hhmm(){var h=Math.floor(mins/60)%24,m=mins%60;return (h<10?'0':'')+h+':'+(m<10?'0':'')+m;}
+  function row(flip){
+    var r=RUNS[i%RUNS.length];i++;mins+=1+Math.floor(Math.random()*3);
+    var li=document.createElement('li');if(flip)li.className='flip';
+    [['bt',hhmm()],['br',r[0]],['bs '+r[2],r[1]]].forEach(function(c){var s=document.createElement('span');s.className=c[0];s.textContent=c[1];li.appendChild(s);});
+    return li;
+  }
+  list.textContent='';
+  for(var k=0;k<3;k++)list.appendChild(row(false));
+  function step(){list.removeChild(list.firstChild);list.appendChild(row(true));}
+  function sync(){if(inView&&!document.hidden){if(!timer)timer=setInterval(step,2800);}else{clearInterval(timer);timer=null;}}
+  if('IntersectionObserver' in window)new IntersectionObserver(function(en){inView=en[0].isIntersecting;sync();}).observe(list);
+  document.addEventListener('visibilitychange',sync);
+  sync();
+})();
