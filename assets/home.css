@@ -33,6 +33,19 @@ body.home .bg-fx::after{opacity:.5;background-image:
 .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 rgba(52,211,153,.6);animation:ping 2.4s ease-out infinite;flex:none}
 @keyframes ping{0%{box-shadow:0 0 0 0 rgba(52,211,153,.55)}70%,100%{box-shadow:0 0 0 8px rgba(52,211,153,0)}}
 
+/* ---------- Departure board (hero) ---------- */
+.board{max-width:440px;border:1px solid var(--hair-2);border-radius:10px;background:#0b0d11;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+.board-top{display:flex;justify-content:space-between;gap:12px;padding:6px 12px;border-bottom:1px solid var(--hair);color:var(--steel);text-transform:uppercase;font-size:.66rem;letter-spacing:.14em}
+.board-top span:first-child{color:var(--warn)}
+.board-rows{list-style:none;margin:0;padding:4px 0;height:78px;overflow:hidden}
+.board-rows li{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:10px;align-items:center;height:23px;padding:0 12px;color:#e9edf2;white-space:nowrap;transform-origin:50% 0;backface-visibility:hidden}
+.board-rows li.flip{animation:flap .5s cubic-bezier(.3,.7,.3,1)}
+.board-rows .bt{color:var(--warn)}
+.board-rows .br{overflow:hidden;text-overflow:ellipsis}
+.board-rows .bs{font-weight:500}
+.board-rows .bs.ok{color:var(--ok)}.board-rows .bs.wn{color:var(--warn)}.board-rows .bs.go{color:var(--accent)}
+@keyframes flap{0%{transform:perspective(300px) rotateX(-88deg);opacity:0}60%{opacity:1}100%{transform:perspective(300px) rotateX(0);opacity:1}}
+
 /* ---------- Hero ---------- */
 .h-hero{padding:72px 0 64px !important}
 .h-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:48px;align-items:center}
@@ -201,7 +214,7 @@ html.js .ind{animation:panelIn .3s ease-out}
   .cmp td.us::before{color:var(--accent)}
 }
 @media (prefers-reduced-motion: reduce){
-  .dot,.schem .flow,.log li,html.js .ind{animation:none}
+  .dot,.schem .flow,.log li,html.js .ind,.board-rows li.flip{animation:none}
   .panel,.tab,.faq summary::after{transition:none}
   .panel.lift:hover{transform:none}
 }
