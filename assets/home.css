@@ -196,8 +196,6 @@ html.js .ind{animation:panelIn .3s ease-out}
 .book .panel h3{font-size:1.3rem}
 .book-list{margin:14px 0 22px;padding-left:18px;color:var(--muted)}
 .book-list li{margin-bottom:6px}
-.book .contact-form{max-width:none}
-.book .cf-alt{margin-left:0}
 
 @media (max-width:960px){
   .h-grid,.proof,.area,.book{grid-template-columns:1fr}
