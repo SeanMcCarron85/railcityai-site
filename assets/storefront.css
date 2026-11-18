@@ -1,4 +1,4 @@
-/* Rail City AI: storefront homepage sections (templates, gear, merch, custom-builds band).
+/* Rail City AI: storefront homepage sections (templates, gear, merch).
    Loads after v2.css, hero-cinematic.css, home.css and channels.css. Header rules are untouched. */
 .sf-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;max-width:1100px;margin:0 auto}
 .sf-grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}
@@ -6,8 +6,6 @@
 .sf-card h3{margin:0;font-size:1.15rem}
 .sf-card p{margin:0;color:var(--muted)}
 .sf-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.sf-disclosure{max-width:760px;margin:22px auto 0;padding:14px 18px;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;background:rgba(34,211,238,.04);color:var(--ink);font-size:.92rem}
-.sf-disclosure[hidden]{display:none}
 .sf-merch{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:24px;align-items:center;max-width:1000px;margin:0 auto}
 .sf-mat{position:relative;aspect-ratio:12/5;padding:0;overflow:hidden;display:flex;align-items:flex-end;justify-content:flex-start}
 .sf-mat-art{position:absolute;inset:14px;border-radius:12px;border:1px dashed rgba(142,162,187,.45);background:
@@ -18,12 +16,6 @@
 .sf-merch-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
 .sf-merch-list li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
 .sf-merch-list b{font-family:var(--head);font-size:1.05rem}
-body.home section.sf-custom{padding-top:40px}
-.sf-band{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;max-width:1000px;margin:0 auto;background:linear-gradient(180deg,#171a21,#15181e)}
-.sf-band h2{font-size:clamp(1.25rem,2.4vw,1.6rem);margin:4px 0 6px}
-.sf-band p{margin:0;color:var(--muted)}
-.sf-band .kicker{margin:0}
-.sf-band .cta-row{margin:0}
 @media (max-width:1024px){.sf-grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:860px){.sf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sf-merch{grid-template-columns:1fr}}
-@media (max-width:560px){.sf-grid,.sf-grid.four{grid-template-columns:1fr}.sf-band{flex-direction:column;align-items:flex-start}.sf-band .cta-row .btn{width:100%;text-align:center}}
+@media (max-width:560px){.sf-grid,.sf-grid.four{grid-template-columns:1fr}}

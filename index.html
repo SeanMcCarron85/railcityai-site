@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- DRAFT (Site Builder placeholder copy, awaiting Copy Chief): title, description and social tags -->
 <title>Rail City AI | AI characters, YouTube channels and tools from a Michigan tech lab</title>
-<meta name="description" content="Rail City AI is a Michigan tech lab making original AI characters, YouTube channels, templates and gear notes. Custom builds by request.">
+<meta name="description" content="Rail City AI is a Michigan tech lab making original AI characters, YouTube channels, templates and gear notes.">
 <link rel="canonical" href="https://railcityai.com/">
 <meta property="og:site_name" content="Rail City AI">
 <meta property="og:title" content="Rail City AI | A Michigan tech lab">
@@ -46,7 +46,6 @@
       <li><a href="/#templates">Templates</a></li>
       <li><a href="/#gear">Gear</a></li>
       <li><a href="/#merch">Merch</a></li>
-      <li><a href="/custom/">Custom builds</a></li>
       <li class="nav-cta"><a class="btn small glow" href="mailto:railcityai@gmail.com?subject=Rail%20City%20AI">Contact</a></li>
     </ul>
   </nav>
@@ -55,8 +54,8 @@
 
 <main id="main">
 
-<!-- HERO. DRAFT copy (Site Builder placeholder, awaiting Copy Chief). "One studio. Every stop." is Sean's approved positioning line.
-     The plan's primary CTA is "Watch on YouTube"; it is held back until the first channel is switched on (no channel has a public upload yet). -->
+<!-- HERO. DRAFT copy (Site Builder placeholder, awaiting Copy Chief copy v2). "One studio. Every stop." is Sean's approved positioning line.
+     Primary CTA "Watch on YouTube" links to #channels (Grok Bot's call, Nov 18). -->
 <section class="hero cine" id="top" aria-labelledby="hero-h" data-frames="/assets/hero-cine/">
   <div class="cine-stage">
     <picture class="cine-still" aria-hidden="true">
@@ -75,20 +74,21 @@
       <div class="cine-logo-wrap"><img class="cine-logo" src="/assets/hero-cine/logo-cine.webp" alt="Rail City AI logo" width="1100" height="528"></div>
       <div class="hero-end">
         <div class="cta-row">
-          <a class="btn glow" href="#templates">See what we're building</a>
+          <a class="btn glow" href="#channels">Watch on YouTube</a>
           <a class="btn ghost" href="mailto:railcityai@gmail.com?subject=Rail%20City%20AI">Get in touch</a>
         </div>
       </div>
     </div>
     <span class="ai-tag cine-ai-tag">AI-generated visuals</span>
     <div class="cine-cue" aria-hidden="true">Scroll<i></i></div>
-    <a class="cine-skip" href="#templates">Skip animation</a>
+    <a class="cine-skip" href="#channels">Skip animation</a>
   </div>
 </section>
 
-<!-- CHANNELS. Toggle: delete " hidden" from a card's <article> line to switch it on (see CHANNELS-TOGGLE.md).
-     Default state (Nov 18, 2026): ALL FIVE OFF. Nell Explains and The Evidence Line have no public upload yet (checked Nov 18, 2026).
-     Every switch-on needs Sean's own yes to Grok Bot before it is published. Section heading and sub are DRAFT until Copy Chief signs off. -->
+<!-- CHANNELS. Toggle: delete " hidden" from a card's <article> line to switch it on, add it back to switch off (see _notes/CHANNELS-TOGGLE.md).
+     Preview state (Nov 18, Grok Bot's call): Nell Explains and The Evidence Line ON; Owen Tech Desk and Engineering Postmortem OFF.
+     The fifth (dark fantasy) channel is intentionally NOT in the markup. Going live with any card needs Sean's own yes to Grok Bot.
+     Section heading and sub are DRAFT until Copy Chief signs off. -->
 <div class="channels-block">
 <div class="rail-divider" aria-hidden="true"><span class="pulse"></span></div>
 <section id="channels" class="channels" aria-labelledby="channels-h"><div class="wrap">
@@ -98,8 +98,8 @@
     <p class="sub">Our own YouTube channels. Every host and narrator is an AI character by Rail City AI.</p>
   </div>
   <div class="channels-grid">
-    <!-- Nell Explains: no affiliate links or affiliate language on or near this card. Switch-on needs a first public upload + Sean's yes. -->
-    <article class="channel-card reveal" data-channel="nell" hidden>
+    <!-- Nell Explains: ON in preview. No affiliate links or affiliate language on or near this card. Going live needs Sean's yes. -->
+    <article class="channel-card reveal" data-channel="nell">
       <div class="ch-media"><img src="/channels/nell-banner.webp" alt="Nell, an AI character, studying an old brass alarm clock in a workroom" width="800" height="450" loading="lazy"><span class="ai-tag">AI character</span></div>
       <div class="ch-body">
         <span class="ch-avatar-wrap"><img class="ch-avatar" src="/channels/nell-profile.webp" alt="" width="192" height="192" loading="lazy"><span class="ai-tag ch-avatar-tag">AI character</span></span>
@@ -110,8 +110,8 @@
         <a class="btn small ghost ch-link" href="https://www.youtube.com/@nellexplains" target="_blank" rel="noopener noreferrer">Watch on YouTube<span class="sr-only"> (Nell Explains, opens in a new tab)</span></a>
       </div>
     </article>
-    <!-- The Evidence Line: switch-on needs a first public upload + Sean's yes. -->
-    <article class="channel-card reveal" data-channel="evidence-line" hidden>
+    <!-- The Evidence Line: ON in preview. Going live needs Sean's yes. -->
+    <article class="channel-card reveal" data-channel="evidence-line">
       <div class="ch-media"><img src="/channels/evidence-line-banner.webp" alt="The Evidence Line channel banner: the wordmark beside an amber question mark" width="800" height="450" loading="lazy"></div>
       <div class="ch-body">
         <img class="ch-avatar" src="/channels/evidence-line-profile.webp" alt="" width="192" height="192" loading="lazy">
@@ -146,17 +146,6 @@
         <a class="btn small ghost ch-link" href="https://www.youtube.com/@engpostmortem" target="_blank" rel="noopener noreferrer">Watch on YouTube<span class="sr-only"> (Engineering Postmortem, opens in a new tab)</span></a>
       </div>
     </article>
-    <!-- Fifth channel (dark fantasy): PLACEHOLDER ONLY. No name, host, handle, art or link exists yet.
-         Never switch on until it has a name, host, real art, Brand Scout's IP check, a first video and Sean's yes. -->
-    <article class="channel-card reveal" data-channel="channel-5" hidden>
-      <div class="ch-media ch-placeholder" aria-hidden="true"><span class="ch-mono">05</span></div>
-      <div class="ch-body">
-        <div class="ch-avatar ch-avatar-ph" aria-hidden="true">05</div>
-        <h3>Channel 5</h3>
-        <p class="ch-handle">Name to be announced</p>
-        <p class="ch-desc">Details to be announced.</p>
-      </div>
-    </article>
   </div>
 </div></section>
 </div>
@@ -189,8 +178,8 @@
   </div>
 </div></section>
 
-<!-- STUDIO GEAR. DRAFT copy (awaiting Copy Chief). No affiliate links yet. Keep the disclosure directly next to the links.
-     Affiliate-disclosure slot: un-hide it in the same change that adds the first affiliate link (needs Sean's yes; Amazon Associates account not yet approved).
+<!-- STUDIO GEAR. DRAFT copy (awaiting Copy Chief). Coming soon: no affiliate links yet.
+     When the first affiliate link is added (Sean's yes), add a disclosure directly next to the links in the same change; add the required Amazon sentence only once an Amazon link exists.
      Never place gear or affiliate links on or near the Nell Explains card. -->
 <section id="gear" aria-labelledby="gear-h"><div class="wrap">
   <div class="section-head reveal">
@@ -216,7 +205,6 @@
       <h3>Creator software</h3>
     </article>
   </div>
-  <p class="sf-disclosure" id="affiliate-disclosure" hidden><strong>Affiliate disclosure:</strong> Some links in this section are affiliate links, marked (paid link). If you buy through them, Rail City AI may earn a commission at no extra cost to you. As an Amazon Associate I earn from qualifying purchases.</p>
 </div></section>
 
 <!-- MERCH. DRAFT copy (awaiting Copy Chief). Desk mat first, then a tee and a hoodie. No store button until the desk mat is actually for sale and Sean says yes. -->
@@ -236,30 +224,13 @@
   </div>
 </div></section>
 
-<div class="rail-divider" aria-hidden="true"><span class="pulse"></span></div>
-
-<!-- CUSTOM BUILDS banner. DRAFT copy (awaiting Copy Chief). Quiet band; no prices here (they live on /custom/). -->
-<section class="sf-custom" id="custom" aria-labelledby="custom-h"><div class="wrap">
-  <div class="panel sf-band reveal">
-    <div>
-      <p class="kicker">Custom builds</p>
-      <h2 id="custom-h">Need something built for your business?</h2>
-      <p>We still take a small number of custom automation projects.</p>
-    </div>
-    <div class="cta-row">
-      <a class="btn ghost" href="/custom/tour/">Explore the workflow demo</a>
-      <a class="btn ghost" href="/custom/#contact">Request a studio consultation</a>
-    </div>
-  </div>
-</div></section>
-
 </main>
 
 <footer><div class="wrap">
   <div class="rail-divider small" aria-hidden="true"><span class="pulse"></span></div>
   <p>Rail City AI, LLC · Durand, Michigan · Mailing address: 9169 W State St #4898, Garden City ID 83714 · <a href="tel:+15177971414">517-797-1414</a> · <a href="mailto:railcityai@gmail.com">railcityai@gmail.com</a></p>
   <p>Rail City AI is independent and not affiliated with any employer.</p>
-  <p><a href="/">Home</a> · <a href="/custom/">Custom builds</a> · <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a></p>
+  <p><a href="/">Home</a> · <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a></p>
 </div></footer>
 <script src="/assets/site.js" defer></script>
 <script src="/assets/hero-cinematic.js" defer></script>

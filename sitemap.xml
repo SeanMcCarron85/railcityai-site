@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://railcityai.com/</loc></url>
-  <url><loc>https://railcityai.com/custom/</loc></url>
-  <url><loc>https://railcityai.com/custom/tour/</loc></url>
-  <url><loc>https://railcityai.com/custom/agents/</loc></url>
-  <url><loc>https://railcityai.com/custom/websites/</loc></url>
-  <url><loc>https://railcityai.com/custom/pricing/</loc></url>
   <url><loc>https://railcityai.com/privacy/</loc></url>
   <url><loc>https://railcityai.com/terms/</loc></url>
 </urlset>
