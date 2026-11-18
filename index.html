@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- DRAFT (Site Builder placeholder copy, awaiting Copy Chief): title, description and social tags -->
-<title>Rail City AI | AI characters, YouTube channels and tools from a Michigan tech lab</title>
-<meta name="description" content="Rail City AI is a Michigan tech lab making original AI characters, YouTube channels, templates and gear notes.">
+<!-- Copy: Copy Chief storefront copy v2 (/workspace/agency/copy/storefront/2026-11-18-storefront-copy-v2.md), passed QG + Brand Boss. -->
+<title>Rail City AI | Original AI characters, YouTube channels, and tools from a Michigan tech lab</title>
+<meta name="description" content="Rail City AI is a small studio and tech lab in Durand, Michigan. We run YouTube channels hosted by AI characters, and we are building templates, a gear list and merch to go with them.">
 <link rel="canonical" href="https://railcityai.com/">
 <meta property="og:site_name" content="Rail City AI">
-<meta property="og:title" content="Rail City AI | A Michigan tech lab">
-<meta property="og:description" content="Original AI characters, YouTube channels and tools from a Michigan tech lab.">
+<meta property="og:title" content="Rail City AI | Original AI characters, YouTube channels, and tools from a Michigan tech lab">
+<meta property="og:description" content="Rail City AI is a small studio and tech lab in Durand, Michigan. We run YouTube channels hosted by AI characters, and we are building templates, a gear list and merch to go with them.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://railcityai.com/">
@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="/assets/v2.css">
 <link rel="stylesheet" href="/assets/hero-cinematic.css">
 <link rel="stylesheet" href="/assets/home.css">
-<!-- Fail-closed default: the channel section and its nav link stay hidden unless channels.css loads AND a card is switched on -->
+<!-- Fail-closed default: the channel section and its nav link stay hidden unless channels.css loads AND a card is on -->
 <style>.channels-block,.nav-channels{display:none}</style>
 <link rel="stylesheet" href="/assets/channels.css">
 <link rel="stylesheet" href="/assets/storefront.css">
@@ -42,20 +42,18 @@
   <nav aria-label="Main">
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"><span class="nav-toggle-bars" aria-hidden="true"></span><span class="sr-only">Menu</span></button>
     <ul class="nav-links" id="nav-menu">
-      <li class="nav-channels"><a href="/#channels">Channels</a></li>
-      <li><a href="/#templates">Templates</a></li>
-      <li><a href="/#gear">Gear</a></li>
-      <li><a href="/#merch">Merch</a></li>
-      <li class="nav-cta"><a class="btn small glow" href="mailto:railcityai@gmail.com?subject=Rail%20City%20AI">Contact</a></li>
+      <li class="nav-channels"><a href="#channels">Channels and Avatars</a></li>
+      <li><a href="/templates/">Templates and STLs</a></li>
+      <li><a href="/gear/">Studio Gear</a></li>
+      <li><a href="/merch/">Merch</a></li>
+      <li class="nav-cta"><a class="btn small glow" href="#channels">Watch on YouTube</a></li>
     </ul>
   </nav>
-  <a class="btn small glow nav-btn" href="mailto:railcityai@gmail.com?subject=Rail%20City%20AI">Contact</a>
+  <a class="btn small glow nav-btn" href="#channels">Watch on YouTube</a>
 </div></header>
 
 <main id="main">
 
-<!-- HERO. DRAFT copy (Site Builder placeholder, awaiting Copy Chief copy v2). "One studio. Every stop." is Sean's approved positioning line.
-     Primary CTA "Watch on YouTube" links to #channels (Grok Bot's call, Nov 18). -->
 <section class="hero cine" id="top" aria-labelledby="hero-h" data-frames="/assets/hero-cine/">
   <div class="cine-stage">
     <picture class="cine-still" aria-hidden="true">
@@ -68,14 +66,15 @@
     <div class="cine-loadbar" aria-hidden="true"></div>
     <div class="cine-content">
       <div class="hero-intro">
-        <h1 id="hero-h"><span class="l1">One studio.</span> <span class="l2 grad">Every stop.</span></h1>
-        <p>Original AI characters, YouTube channels and tools from a Michigan tech lab.</p>
+        <h1 id="hero-h" class="sf-h1"><span class="l1">Original AI characters, YouTube channels, and tools</span> <span class="l2 grad">from a Michigan tech lab.</span></h1>
+        <p>Rail City AI is a small studio and tech lab in Durand, Michigan. We run YouTube channels hosted by AI characters, and we're building templates, a gear list and merch to go with them.</p>
       </div>
       <div class="cine-logo-wrap"><img class="cine-logo" src="/assets/hero-cine/logo-cine.webp" alt="Rail City AI logo" width="1100" height="528"></div>
       <div class="hero-end">
+        <p class="coming sf-hook">Every host is an AI character, and we say so.</p>
         <div class="cta-row">
           <a class="btn glow" href="#channels">Watch on YouTube</a>
-          <a class="btn ghost" href="mailto:railcityai@gmail.com?subject=Rail%20City%20AI">Get in touch</a>
+          <a class="btn ghost" href="#templates">See what's coming</a>
         </div>
       </div>
     </div>
@@ -85,10 +84,9 @@
   </div>
 </section>
 
-<!-- CHANNELS. Toggle: delete " hidden" from a card's <article> line to switch it on, add it back to switch off (see _notes/CHANNELS-TOGGLE.md).
-     Preview state (Nov 18, Grok Bot's call): Nell Explains and The Evidence Line ON; Owen Tech Desk and Engineering Postmortem OFF.
-     The fifth (dark fantasy) channel is intentionally NOT in the markup. Going live with any card needs Sean's own yes to Grok Bot.
-     Section heading and sub are DRAFT until Copy Chief signs off. -->
+<!-- CHANNELS. Toggle: delete " hidden" from a card's <article> line to switch it on; add it back to switch off (see _notes/CHANNELS-TOGGLE.md).
+     Preview state (Nov 18): Nell Explains and The Evidence Line ON; Owen Tech Desk and Engineering Postmortem HIDDEN. The fifth channel is not in the markup.
+     Going live with any card needs Sean's own yes to Grok Bot. No affiliate, commission, gear or paid-link wording on or next to the Nell card. -->
 <div class="channels-block">
 <div class="rail-divider" aria-hidden="true"><span class="pulse"></span></div>
 <section id="channels" class="channels" aria-labelledby="channels-h"><div class="wrap">
@@ -98,7 +96,6 @@
     <p class="sub">Our own YouTube channels. Every host and narrator is an AI character by Rail City AI.</p>
   </div>
   <div class="channels-grid">
-    <!-- Nell Explains: ON in preview. No affiliate links or affiliate language on or near this card. Going live needs Sean's yes. -->
     <article class="channel-card reveal" data-channel="nell">
       <div class="ch-media"><img src="/channels/nell-banner.webp" alt="Nell, an AI character, studying an old brass alarm clock in a workroom" width="800" height="450" loading="lazy"><span class="ai-tag">AI character</span></div>
       <div class="ch-body">
@@ -110,7 +107,6 @@
         <a class="btn small ghost ch-link" href="https://www.youtube.com/@nellexplains" target="_blank" rel="noopener noreferrer">Watch on YouTube<span class="sr-only"> (Nell Explains, opens in a new tab)</span></a>
       </div>
     </article>
-    <!-- The Evidence Line: ON in preview. Going live needs Sean's yes. -->
     <article class="channel-card reveal" data-channel="evidence-line">
       <div class="ch-media"><img src="/channels/evidence-line-banner.webp" alt="The Evidence Line channel banner: the wordmark beside an amber question mark" width="800" height="450" loading="lazy"></div>
       <div class="ch-body">
@@ -122,7 +118,6 @@
         <a class="btn small ghost ch-link" href="https://www.youtube.com/@EvidenceLineFiles" target="_blank" rel="noopener noreferrer">Watch on YouTube<span class="sr-only"> (The Evidence Line, opens in a new tab)</span></a>
       </div>
     </article>
-    <!-- Owen Tech Desk: stays hidden until real art, a first video and Sean's yes. -->
     <article class="channel-card reveal" data-channel="owen" hidden>
       <div class="ch-media ch-placeholder" aria-hidden="true"><span class="ch-mono">OTD</span></div>
       <div class="ch-body">
@@ -134,7 +129,6 @@
         <a class="btn small ghost ch-link" href="https://www.youtube.com/@OwenTechDesk" target="_blank" rel="noopener noreferrer">Watch on YouTube<span class="sr-only"> (Owen Tech Desk, opens in a new tab)</span></a>
       </div>
     </article>
-    <!-- Engineering Postmortem: stays hidden until real art, a first video and Sean's yes. -->
     <article class="channel-card reveal" data-channel="engpostmortem" hidden>
       <div class="ch-media ch-placeholder" aria-hidden="true"><span class="ch-mono">EP</span></div>
       <div class="ch-body">
@@ -152,85 +146,98 @@
 
 <div class="rail-divider" aria-hidden="true"><span class="pulse"></span></div>
 
-<!-- TEMPLATES. DRAFT copy (awaiting Copy Chief). Coming soon only: no prices, no buy or download buttons until a finished product exists and Sean says yes. -->
+<!-- TEMPLATES: Coming soon only. No price, no "Instant Download", no buy/cart button, no product names, no buttons on the cards. -->
 <section id="templates" aria-labelledby="templates-h"><div class="wrap">
   <div class="section-head reveal">
-    <p class="kicker">Templates, kits and STLs</p>
-    <h2 id="templates-h">Tools from the lab</h2>
-    <p class="sub">Downloads we use ourselves, packaged for you. The first one is still in the works.</p>
+    <p class="kicker">Templates and STLs</p>
+    <h2 id="templates-h">Things we're building to share</h2>
+    <p class="sub">Templates, kits and 3D-print files from the lab. Nothing is available yet. Each one goes up when it's actually finished.</p>
   </div>
   <div class="sf-grid">
     <article class="panel sf-card reveal">
-      <div class="sf-top"><span class="b-num">01 / KITS</span><span class="st wn">Coming soon</span></div>
-      <h3>Prompt and workflow kits</h3>
-      <p>Step-by-step kits for the AI workflows we run every day.</p>
+      <div class="sf-top"><span class="b-num">01</span><span class="st wn">Coming soon</span></div>
+      <h3>Templates</h3>
+      <p>Starter files from the projects we build.</p>
     </article>
     <article class="panel sf-card reveal">
-      <div class="sf-top"><span class="b-num">02 / TEMPLATES</span><span class="st wn">Coming soon</span></div>
-      <h3>Site and app templates</h3>
-      <p>Starter templates for small sites and tools.</p>
+      <div class="sf-top"><span class="b-num">02</span><span class="st wn">Coming soon</span></div>
+      <h3>Kits</h3>
+      <p>Bundles of files and notes for one job.</p>
     </article>
     <article class="panel sf-card reveal">
-      <div class="sf-top"><span class="b-num">03 / STLS</span><span class="st wn">Coming soon</span></div>
-      <h3>3D-print files</h3>
-      <p>Printable desk and studio parts from our own setup.</p>
+      <div class="sf-top"><span class="b-num">03</span><span class="st wn">Coming soon</span></div>
+      <h3>STL files</h3>
+      <p>Print-ready 3D files.</p>
     </article>
   </div>
+  <p class="sf-more reveal"><a href="/templates/">See the templates page &rarr;</a></p>
 </div></section>
 
-<!-- STUDIO GEAR. DRAFT copy (awaiting Copy Chief). Coming soon: no affiliate links yet.
-     When the first affiliate link is added (Sean's yes), add a disclosure directly next to the links in the same change; add the required Amazon sentence only once an Amazon link exists.
-     Never place gear or affiliate links on or near the Nell Explains card. -->
+<!-- STUDIO GEAR (homepage): no affiliate links in this section, so no disclosure here (the disclosure sits with the links on /gear/).
+     AMAZON SENTENCE GOES HERE once the first Amazon link exists, right after the disclosure, verbatim: "As an Amazon Associate I earn from qualifying purchases." -->
 <section id="gear" aria-labelledby="gear-h"><div class="wrap">
   <div class="section-head reveal">
     <p class="kicker">Studio gear</p>
-    <h2 id="gear-h">What's on our desk</h2>
-    <p class="sub">The gear and software we actually use, with an honest note on each. Our picks are coming soon.</p>
+    <h2 id="gear-h">What's on the desk</h2>
+    <p class="sub">The hardware and software behind the videos, with a short note on why each one is here.</p>
   </div>
   <div class="sf-grid four">
     <article class="panel sf-card reveal">
-      <div class="sf-top"><span class="b-num">01 / COMPUTE</span><span class="st wn">Coming soon</span></div>
-      <h3>Local AI compute</h3>
+      <div class="sf-top"><span class="b-num">01</span><span class="st wn">List coming soon</span></div>
+      <h3>Local AI Compute</h3>
     </article>
     <article class="panel sf-card reveal">
-      <div class="sf-top"><span class="b-num">02 / PRINT</span><span class="st wn">Coming soon</span></div>
-      <h3>3D printing and filament</h3>
+      <div class="sf-top"><span class="b-num">02</span><span class="st wn">List coming soon</span></div>
+      <h3>3D Printing and Filament</h3>
     </article>
     <article class="panel sf-card reveal">
-      <div class="sf-top"><span class="b-num">03 / DESK</span><span class="st wn">Coming soon</span></div>
-      <h3>Smart tech and desk gadgets</h3>
+      <div class="sf-top"><span class="b-num">03</span><span class="st wn">List coming soon</span></div>
+      <h3>Smart Tech and Desk Gadgets</h3>
     </article>
     <article class="panel sf-card reveal">
-      <div class="sf-top"><span class="b-num">04 / SOFTWARE</span><span class="st wn">Coming soon</span></div>
-      <h3>Creator software</h3>
+      <div class="sf-top"><span class="b-num">04</span><span class="st wn">List coming soon</span></div>
+      <h3>Creator Software</h3>
     </article>
   </div>
+  <p class="sf-more reveal"><a href="/gear/">See the full gear list &rarr;</a></p>
 </div></section>
 
-<!-- MERCH. DRAFT copy (awaiting Copy Chief). Desk mat first, then a tee and a hoodie. No store button until the desk mat is actually for sale and Sean says yes. -->
+<!-- MERCH: no design description, prices, sizes, buy/shop button, store link or email sign-up. -->
 <section id="merch" aria-labelledby="merch-h"><div class="wrap">
   <div class="section-head reveal">
     <p class="kicker">Merch</p>
-    <h2 id="merch-h">Rail City AI merch</h2>
-    <p class="sub">A desk mat comes first, then a tee and a hoodie. Coming soon.</p>
+    <h2 id="merch-h">Merch is on the way</h2>
+    <p class="sub">A desk mat comes first. A tee and a hoodie follow.</p>
   </div>
-  <div class="sf-merch">
-    <div class="panel sf-mat reveal" aria-hidden="true"><span class="sf-mat-art"></span><span class="sf-mat-label">Desk mat design in progress</span></div>
-    <ul class="sf-merch-list reveal">
-      <li><b>Desk mat</b><span class="st wn">Coming soon</span></li>
-      <li><b>Tee</b><span class="st wn">Later</span></li>
-      <li><b>Hoodie</b><span class="st wn">Later</span></li>
-    </ul>
+  <div class="sf-grid">
+    <article class="panel sf-card reveal">
+      <div class="sf-top"><span class="b-num">01</span><span class="st wn">Coming soon</span></div>
+      <h3>Desk mat</h3>
+      <p>First up.</p>
+    </article>
+    <article class="panel sf-card reveal">
+      <div class="sf-top"><span class="b-num">02</span><span class="st wn">Coming soon</span></div>
+      <h3>Tee</h3>
+      <p>After the desk mat.</p>
+    </article>
+    <article class="panel sf-card reveal">
+      <div class="sf-top"><span class="b-num">03</span><span class="st wn">Coming soon</span></div>
+      <h3>Hoodie</h3>
+      <p>After the desk mat.</p>
+    </article>
   </div>
+  <p class="sf-more reveal"><a href="#channels">Follow along on YouTube to see it when it's ready.</a></p>
 </div></section>
 
 </main>
 
 <footer><div class="wrap">
   <div class="rail-divider small" aria-hidden="true"><span class="pulse"></span></div>
-  <p>Rail City AI, LLC · Durand, Michigan · Mailing address: 9169 W State St #4898, Garden City ID 83714 · <a href="tel:+15177971414">517-797-1414</a> · <a href="mailto:railcityai@gmail.com">railcityai@gmail.com</a></p>
+  <p>Rail City AI, LLC · Durand, Michigan · <a href="mailto:railcityai@gmail.com">railcityai@gmail.com</a></p>
+  <p>Every host and narrator on this site is an AI character by Rail City AI, not a real person.</p>
+  <p>Some links on this site are affiliate links. See the disclosure on the <a href="/gear/">gear page</a>.</p>
   <p>Rail City AI is independent and not affiliated with any employer.</p>
-  <p><a href="/">Home</a> · <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a></p>
+  <p><a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a></p>
 </div></footer>
 <script src="/assets/site.js" defer></script>
 <script src="/assets/hero-cinematic.js" defer></script>

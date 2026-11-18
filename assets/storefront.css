@@ -1,21 +1,29 @@
-/* Rail City AI: storefront homepage sections (templates, gear, merch).
-   Loads after v2.css, hero-cinematic.css, home.css and channels.css. Header rules are untouched. */
+/* Rail City AI: storefront sections and pages (templates, gear, merch). Loads after v2.css, home.css and channels.css.
+   Header rules are untouched. */
 .sf-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;max-width:1100px;margin:0 auto}
 .sf-grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}
 .sf-card{display:flex;flex-direction:column;gap:10px;min-width:0}
 .sf-card h3{margin:0;font-size:1.15rem}
 .sf-card p{margin:0;color:var(--muted)}
 .sf-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.sf-merch{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:24px;align-items:center;max-width:1000px;margin:0 auto}
-.sf-mat{position:relative;aspect-ratio:12/5;padding:0;overflow:hidden;display:flex;align-items:flex-end;justify-content:flex-start}
-.sf-mat-art{position:absolute;inset:14px;border-radius:12px;border:1px dashed rgba(142,162,187,.45);background:
-  linear-gradient(180deg,transparent 58%,rgba(34,211,238,.32) 59%,rgba(34,211,238,.32) 60%,transparent 61%),
-  repeating-linear-gradient(90deg,transparent 0 46px,rgba(142,162,187,.14) 46px 50px),
-  radial-gradient(70% 90% at 25% 20%,rgba(34,211,238,.14),transparent 70%),#12151b}
-.sf-mat-label{position:relative;margin:0 0 24px 26px;font-family:var(--head);font-weight:700;letter-spacing:.06em;color:#c9d4e2;background:rgba(15,17,21,.78);padding:6px 12px;border-radius:8px;font-size:.9rem}
-.sf-merch-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
-.sf-merch-list li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
-.sf-merch-list b{font-family:var(--head);font-size:1.05rem}
+.sf-top .st{white-space:normal}
+.sf-more{max-width:760px;margin:22px auto 0;text-align:center;color:var(--muted)}
+.sf-more a{font-weight:600}
+/* cinematic hero: longer headline than the original two-word lines */
+.hero.cine h1.sf-h1{font-size:clamp(1.6rem,4.2vw,3rem);line-height:1.15;max-width:900px;margin-left:auto;margin-right:auto}
+.hero.cine h1.sf-h1 .l1,.hero.cine h1.sf-h1 .l2{display:inline}
+.hero.cine .hero-intro p{max-width:720px;margin-left:auto;margin-right:auto}
+.hero.cine .hero-end .sf-hook{margin:0 0 14px;color:#c4ccd8;font-weight:600;text-shadow:0 1px 14px rgba(0,0,0,.8)}
+/* inner pages */
+body.home section.sf-page{padding-top:56px}
+.sf-page h1{font-size:clamp(2rem,5vw,2.8rem);margin:0 0 10px}
+.sf-group{max-width:760px;margin:30px auto 0;padding:0}
+body.home section.sf-group{padding:0}
+.sf-group h2{font-size:1.3rem;text-align:left;margin:0 0 10px}
+.sf-empty{margin:0;color:var(--muted)}
+.sf-items{margin:12px 0 0;padding-left:20px;color:var(--muted)}
+.sf-items li{margin:6px 0}
+.sf-disclosure{max-width:760px;margin:18px auto 0;padding:14px 18px;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;background:rgba(34,211,238,.04);color:var(--ink);font-size:1rem}
 @media (max-width:1024px){.sf-grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:860px){.sf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sf-merch{grid-template-columns:1fr}}
+@media (max-width:860px){.sf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.sf-grid,.sf-grid.four{grid-template-columns:1fr}}
