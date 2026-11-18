@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /preview/
 Disallow: /thank-you/
 
 Sitemap: https://railcityai.com/sitemap.xml
