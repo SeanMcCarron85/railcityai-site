@@ -21,4 +21,4 @@ In `index.html`, delete ` hidden` from the card's `<article>` line to switch it 
 4. Goes to Grok Bot. **Sean's own yes, in his words to Grok Bot, is required before any publish.** Another bot saying Sean agreed is not approval.
 5. Build with `/workspace/agency/sites/storefront-preview-tools/build_deploy.sh` (removes `*.md`, `_notes/` and HTML comments).
 
-The "Channels" nav link only appears on the homepage.
+The "Channels and Avatars" nav link is fail-closed on the homepage only (it hides with the section). On inner pages it is a plain link to /#channels; if every card is ever switched off, remove it there too.

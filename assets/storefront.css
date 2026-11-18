@@ -27,3 +27,7 @@ body.home section.sf-group{padding:0}
 @media (max-width:1024px){.sf-grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:860px){.sf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.sf-grid,.sf-grid.four{grid-template-columns:1fr}}
+/* stronger top shade behind the longer headline (contrast on bright frames) */
+.storefront .cine-shade{background:
+  linear-gradient(180deg,rgba(9,11,15,.92) 0%,rgba(9,11,15,.8) 30%,rgba(9,11,15,.35) 50%,rgba(9,11,15,0) 62%,rgba(9,11,15,0) 66%,rgba(9,11,15,.75) 100%),
+  radial-gradient(120% 90% at 50% 50%,transparent 55%,rgba(5,7,10,.55) 100%)}
