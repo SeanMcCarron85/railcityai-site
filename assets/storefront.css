@@ -31,3 +31,5 @@ body.home section.sf-group{padding:0}
 .storefront .cine-shade{background:
   linear-gradient(180deg,rgba(9,11,15,.92) 0%,rgba(9,11,15,.8) 30%,rgba(9,11,15,.35) 50%,rgba(9,11,15,0) 62%,rgba(9,11,15,0) 66%,rgba(9,11,15,.75) 100%),
   radial-gradient(120% 90% at 50% 50%,transparent 55%,rgba(5,7,10,.55) 100%)}
+/* No-JS phones only: the header button shows "Watch" so it doesn't run into the wordmark (layout unchanged; full label stays in aria-label) */
+@media (max-width:520px){html:not(.js) .nav-btn .sf-long{display:none}}
