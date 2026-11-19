@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+<title>Rail City AI</title>
+<defs><clipPath id="inside"><path d="M 449.8 79.0 Q 500.0 50.0 550.2 79.0 L 834.8 243.0 Q 885.0 272.0 885.0 330.0 L 885.0 670.0 Q 885.0 728.0 834.8 757.0 L 550.2 921.0 Q 500.0 950.0 449.8 921.0 L 165.2 757.0 Q 115.0 728.0 115.0 670.0 L 115.0 330.0 Q 115.0 272.0 165.2 243.0 Z"/></clipPath><filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+
+<g filter="url(#glow)"><path id="badge" d="M 449.8 79.0 Q 500.0 50.0 550.2 79.0 L 834.8 243.0 Q 885.0 272.0 885.0 330.0 L 885.0 670.0 Q 885.0 728.0 834.8 757.0 L 550.2 921.0 Q 500.0 950.0 449.8 921.0 L 165.2 757.0 Q 115.0 728.0 115.0 670.0 L 115.0 330.0 Q 115.0 272.0 165.2 243.0 Z" fill="none" stroke="#22d3ee" stroke-width="30" stroke-linejoin="round"/>
+<path d="M 418 690 L 360 852 M 582 690 L 640 852 M 392 726 L 608 726 M 372 782 L 628 782 M 352 836 L 648 836" fill="none" stroke="#22d3ee" stroke-width="18" stroke-linecap="round"/>
+<path d="M 336 652 C 328 540 334 420 366 352 C 384 316 436 300 500 300 C 564 300 616 316 634 352 C 666 420 672 540 664 652 C 610 690 390 690 336 652 Z" fill="none" stroke="#22d3ee" stroke-width="18" stroke-linejoin="round"/>
+<path d="M 394 352 C 440 334 560 334 606 352 L 572 452 C 568 464 560 470 548 470 L 452 470 C 440 470 432 464 428 452 Z M 420 600 C 420 568 446 556 500 556 C 554 556 580 568 580 600 C 580 632 554 644 500 644 C 446 644 420 632 420 600 Z" fill="none" stroke="#22d3ee" stroke-width="16" stroke-linejoin="round"/>
+<rect x="444" y="496" width="112" height="30" rx="15" fill="none" stroke="#ff2bd6" stroke-width="12"/></g>
+</svg>

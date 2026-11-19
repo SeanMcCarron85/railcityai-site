@@ -212,3 +212,6 @@ footer a{color:var(--accent)}
 .terms-list.small li{font-size:.88rem;padding:8px 12px 8px 30px}
 .terms-list.small li::before{left:12px;top:15px;width:7px;height:7px}
 .guarantee .terms-list{margin-top:26px}
+
+/* Logo B header mark: square badge, no edge fade */
+.brand .mark.mark-b{-webkit-mask-image:none;mask-image:none}
