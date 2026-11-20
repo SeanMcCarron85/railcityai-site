@@ -22,20 +22,20 @@
 <meta name="twitter:description" content="Rail City AI merch, printed on demand through Fourthwall. Desk mat first, then a tee and a hoodie. Off the Rails. On the Screen.">
 <meta name="twitter:image" content="https://railcityai.com/assets/og-image.png">
 <link rel="icon" href="/assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="icon" type="image/png" href="/assets/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&amp;display=swap">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/chakra-petch-latin-700-normal.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-latin-wght-normal.woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/store-link.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="/" aria-label="Rail City AI home">
-      <img src="/assets/logo.svg" alt="" width="40" height="40">
+      <img src="/assets/favicon.svg" alt="" width="40" height="40">
       <span>RAIL CITY <span class="ai">AI</span></span>
     </a>
     <nav class="site-nav" aria-label="Main">
@@ -55,7 +55,7 @@
       <span class="eyebrow">Merch</span>
       <h1>Merch</h1>
       <p class="slogan"><span>Off the Rails.</span> <span>On the Screen.</span></p>
-      <p>Our merch is printed on demand, so each item is made when you order it. The desk mat comes first, then a tee and a hoodie.</p>
+      <p>Our first piece of merch is a desk mat with the rail-to-circuit design from our brand. A tee and a hoodie will follow. Everything is printed on demand, so each item is made when you order it.</p>
     </div>
   </section>
 
@@ -63,28 +63,31 @@
     <div class="wrap">
       <div class="grid merch-grid">
         <article class="card merch-card featured">
-          <div class="mock" aria-hidden="true">Desk mat</div>
+          <img class="merch-photo" src="/assets/merch/desk-mat.jpg" alt="Rail City AI desk mat design: the neon hex train badge and the words Rail City AI, Off the Rails. On the Screen., on a dark background with glowing cyan rail tracks that turn into circuit lines." width="1600" height="838" loading="lazy">
           <span class="status">Coming first</span>
-          <h3>Rail City AI desk mat</h3>
-          <p>Our first piece of merch: a dark desk mat in the Rail City AI colors.</p>
-          <p>Sized for a keyboard and mouse, with the Rail City AI badge and our slogan.</p>
-          <!-- DESK MAT BUTTON: when the store opens, delete the "Coming soon" line below and uncomment the "Shop the desk mat" link.
-               Replace FOURTHWALL_STORE_URL with the real Fourthwall product or store link. -->
-          <span class="btn btn-disabled" aria-disabled="true">Coming soon</span>
-          <!-- <a class="btn btn-primary" href="FOURTHWALL_STORE_URL" target="_blank" rel="noopener">Shop the desk mat<span class="visually-hidden"> (opens our Fourthwall store in a new tab)</span></a> -->
+          <h2 class="merch-title">Rail City AI Desk Mat - Off the Rails</h2>
+          <dl class="specs">
+            <div><dt>Size</dt><dd>15.5" x 31.5"</dd></div>
+            <div><dt>Price</dt><dd>$24.99</dd></div>
+          </dl>
+          <p>A full-size desk mat with room for a keyboard and mouse. The rail lines run across the mat and turn into circuit traces on the right.</p>
+          <!-- STORE LINK: paste the Fourthwall product URL into data-store-url below (keep the quotes).
+               While it's empty, the button stays disabled and reads "Coming soon".
+               Once it starts with https://, the button becomes a "Shop the desk mat" link automatically. -->
+          <button type="button" class="btn btn-primary" data-store-url="" data-store-label="Shop the desk mat" disabled>Coming soon</button>
         </article>
-        <article class="card merch-card">
-          <div class="mock" aria-hidden="true">Tee</div>
-          <span class="status">Coming soon</span>
-          <h3>T-shirt</h3>
-          <p>A soft tee with the badge and the slogan.</p>
-        </article>
-        <article class="card merch-card">
-          <div class="mock" aria-hidden="true">Hoodie</div>
-          <span class="status">Coming soon</span>
-          <h3>Hoodie</h3>
-          <p>For cold Michigan mornings at the workbench.</p>
-        </article>
+        <div class="merch-side">
+          <article class="card merch-card">
+            <span class="status">Coming soon</span>
+            <h3>T-shirt</h3>
+            <p>A soft tee with the badge and the slogan.</p>
+          </article>
+          <article class="card merch-card">
+            <span class="status">Coming soon</span>
+            <h3>Hoodie</h3>
+            <p>For cold Michigan mornings at the workbench.</p>
+          </article>
+        </div>
       </div>
     </div>
   </section>
@@ -103,7 +106,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a class="brand" href="/" aria-label="Rail City AI home">
-          <img src="/assets/logo.svg" alt="" width="40" height="40">
+          <img src="/assets/favicon.svg" alt="" width="40" height="40">
           <span>RAIL CITY <span class="ai">AI</span></span>
         </a>
         <p>A small studio and tech lab in Durand, Michigan. Every host is an AI character, and we say so.</p>
