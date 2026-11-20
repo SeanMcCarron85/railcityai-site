@@ -218,7 +218,7 @@ main { display: block; }
 }
 .merch-card.featured { border-color: rgba(34, 211, 238, 0.6); }
 @media (min-width: 960px) { .merch-grid { grid-template-columns: 1.4fr 1fr 1fr; } }
-.slogan, .section-head .slogan {
+.slogan, .section-head .slogan, .page-hero .slogan {
   font-family: var(--font-head); font-weight: 700; font-size: clamp(1.4rem, 3.4vw, 2rem);
   color: var(--text); margin: 0 0 24px;
 }
@@ -265,3 +265,4 @@ main { display: block; }
 .legal-list { gap: 6px 20px; }
 .legal-list a { color: var(--muted); }
 .legal-list a:hover { color: var(--cyan); }
+.footer-bottom p { margin: 0; }
