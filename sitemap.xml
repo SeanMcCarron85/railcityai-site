@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://railcityai.com/</loc></url>
-  <url><loc>https://railcityai.com/agents/</loc></url>
-  <url><loc>https://railcityai.com/websites/</loc></url>
-  <url><loc>https://railcityai.com/video/</loc></url>
-  <url><loc>https://railcityai.com/pricing/</loc></url>
-  <url><loc>https://railcityai.com/showcase/</loc></url>
-  <url><loc>https://railcityai.com/privacy/</loc></url>
-  <url><loc>https://railcityai.com/terms/</loc></url>
+  <url><loc>https://railcityai.com/</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://railcityai.com/templates/</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://railcityai.com/gear/</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://railcityai.com/merch/</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://railcityai.com/privacy/</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://railcityai.com/terms/</loc><lastmod>2026-11-20</lastmod></url>
 </urlset>
