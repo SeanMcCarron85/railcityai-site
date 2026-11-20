@@ -22,11 +22,10 @@
 <meta name="twitter:description" content="Rail City AI is a small studio and tech lab in Durand, Michigan. We run YouTube channels hosted by AI characters, and we're building templates, a gear list and merch.">
 <meta name="twitter:image" content="https://railcityai.com/assets/og-image.png">
 <link rel="icon" href="/assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="icon" type="image/png" href="/assets/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&amp;display=swap">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/chakra-petch-latin-700-normal.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-latin-wght-normal.woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">
@@ -52,7 +51,7 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="/" aria-label="Rail City AI home">
-      <img src="/assets/logo.svg" alt="" width="40" height="40">
+      <img src="/assets/favicon.svg" alt="" width="40" height="40">
       <span>RAIL CITY <span class="ai">AI</span></span>
     </a>
     <nav class="site-nav" aria-label="Main">
@@ -75,7 +74,7 @@
         <p class="hero-sub">Rail City AI is a small studio and tech lab in Durand, Michigan. We run YouTube channels hosted by AI characters, and we're building templates, a gear list and merch to go with them.</p>
         <div class="btn-row">
           <a class="btn btn-primary" href="#channels">Watch on YouTube</a>
-          <a class="btn btn-ghost" href="#templates">See what's coming</a>
+          <a class="btn btn-ghost" href="#whats-coming">See what's coming</a>
         </div>
       </div>
       <div class="hero-badge">
@@ -148,108 +147,32 @@
     </div>
   </section>
 
-  <section class="section" id="templates" aria-labelledby="templates-title">
+  <section class="section" id="whats-coming" aria-labelledby="coming-title">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Downloads</span>
-        <h2 id="templates-title">Templates, kits and STL files</h2>
-        <p>Digital downloads we're making in the lab. Nothing is for sale yet.</p>
+        <span class="eyebrow">Coming soon</span>
+        <h2 id="coming-title">What else we're making</h2>
       </div>
-      <div class="grid grid-3">
-        <article class="card">
-          <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="8" y="6" width="32" height="36" rx="4"/><path d="M15 16h18M15 24h18M15 32h10"/></svg>
-          <span class="status">Coming soon</span>
-          <h3>Templates</h3>
-          <p>Ready-to-use files for planning videos, projects and the desk setup behind them.</p>
+      <div class="grid grid-3 teasers">
+        <article class="card teaser">
+          <div class="teaser-art" aria-hidden="true"><svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="8" y="6" width="32" height="36" rx="4"/><path d="M15 16h18M15 24h18M15 32h10"/></svg></div>
+          <h3>Downloads</h3>
+          <p>Templates, kits and 3D-print STL files from the lab.</p>
+          <a class="teaser-link" href="/templates/">See the downloads<span class="visually-hidden"> page</span></a>
         </article>
-        <article class="card">
-          <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 16l18-9 18 9-18 9z"/><path d="M6 16v16l18 9 18-9V16"/><path d="M24 25v16"/></svg>
-          <span class="status">Coming soon</span>
-          <h3>Kits</h3>
-          <p>Bundles of graphics and assets for making your own videos and channel art.</p>
+        <article class="card teaser">
+          <div class="teaser-art" aria-hidden="true"><svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="6" y="10" width="36" height="22" rx="3"/><path d="M18 40h12M24 32v8"/></svg></div>
+          <h3>Gear</h3>
+          <p>The hardware and software on our desk, listed honestly.</p>
+          <a class="teaser-link" href="/gear/">See the gear list<span class="visually-hidden"> page</span></a>
         </article>
-        <article class="card">
-          <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M24 5l17 10v18L24 43 7 33V15z"/><path d="M7 15l17 10 17-10M24 25v18"/></svg>
-          <span class="status">Coming soon</span>
-          <h3>STL files</h3>
-          <p>3D-print files designed in our lab, for desks, cables and studio gear.</p>
-        </article>
-      </div>
-      <p class="section-link"><a href="/templates/">More about the downloads</a></p>
-    </div>
-  </section>
-
-  <section class="section" id="gear" aria-labelledby="gear-title">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Studio gear</span>
-        <h2 id="gear-title">What's on the desk</h2>
-        <p>The tools behind the videos. We're putting the list together now.</p>
-      </div>
-      <!-- AFFILIATE DISCLOSURE: once real affiliate links exist, uncomment this paragraph so it sits directly above the first link.
-      <p class="disclosure">Some links in this section are affiliate links. If you buy through them, Rail City AI may earn a commission at no extra cost to you.</p>
-      -->
-      <!-- AMAZON: only uncomment once at least one Amazon link is on this page.
-      <p class="disclosure">As an Amazon Associate I earn from qualifying purchases.</p>
-      -->
-      <div class="grid grid-4">
-        <article class="card tile">
-          <span class="status">List coming soon</span>
-          <h3>Local AI Compute</h3>
-          <p>The machines and parts we use to run AI tools on our own hardware.</p>
-        </article>
-        <article class="card tile">
-          <span class="status">List coming soon</span>
-          <h3>3D Printing and Filament</h3>
-          <p>Printers, filament and the small tools that make prints come out right.</p>
-        </article>
-        <article class="card tile">
-          <span class="status">List coming soon</span>
-          <h3>Smart Tech and Desk Gadgets</h3>
-          <p>Useful gadgets that earned a permanent spot on the desk.</p>
-        </article>
-        <article class="card tile">
-          <span class="status">List coming soon</span>
-          <h3>Creator Software</h3>
-          <p>The apps we actually use to write, record and edit our videos.</p>
+        <article class="card teaser">
+          <div class="teaser-art teaser-photo"><img src="/assets/merch/desk-mat-crop.jpg" alt="Close-up of the Rail City AI desk mat: the neon hex train badge and the slogan Off the Rails. On the Screen." width="640" height="336" loading="lazy"></div>
+          <h3>Merch</h3>
+          <p>Our desk mat is up first, then a tee and a hoodie.</p>
+          <a class="teaser-link" href="/merch/">See the merch<span class="visually-hidden"> page</span></a>
         </article>
       </div>
-      <p class="section-link"><a href="/gear/">See the gear page</a></p>
-    </div>
-  </section>
-
-  <section class="section" id="merch" aria-labelledby="merch-title">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Merch</span>
-        <h2 id="merch-title">Merch</h2>
-        <p class="slogan"><span>Off the Rails.</span> <span>On the Screen.</span></p>
-      </div>
-      <div class="grid merch-grid">
-        <article class="card merch-card featured">
-          <div class="mock" aria-hidden="true">Desk mat</div>
-          <span class="status">Coming first</span>
-          <h3>Rail City AI desk mat</h3>
-          <p>Our first piece of merch: a dark desk mat in the Rail City AI colors.</p>
-          <!-- DESK MAT BUTTON: when the store opens, delete the "Coming soon" line below and uncomment the "Shop the desk mat" link.
-               Replace FOURTHWALL_STORE_URL with the real Fourthwall product or store link. -->
-          <span class="btn btn-disabled" aria-disabled="true">Coming soon</span>
-          <!-- <a class="btn btn-primary" href="FOURTHWALL_STORE_URL" target="_blank" rel="noopener">Shop the desk mat<span class="visually-hidden"> (opens our Fourthwall store in a new tab)</span></a> -->
-        </article>
-        <article class="card merch-card">
-          <div class="mock" aria-hidden="true">Tee</div>
-          <span class="status">Coming soon</span>
-          <h3>T-shirt</h3>
-          <p>A soft tee with the badge and the slogan.</p>
-        </article>
-        <article class="card merch-card">
-          <div class="mock" aria-hidden="true">Hoodie</div>
-          <span class="status">Coming soon</span>
-          <h3>Hoodie</h3>
-          <p>For cold Michigan mornings at the workbench.</p>
-        </article>
-      </div>
-      <p class="section-link"><a href="/merch/">More about the merch</a></p>
     </div>
   </section>
 </main>
@@ -259,7 +182,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a class="brand" href="/" aria-label="Rail City AI home">
-          <img src="/assets/logo.svg" alt="" width="40" height="40">
+          <img src="/assets/favicon.svg" alt="" width="40" height="40">
           <span>RAIL CITY <span class="ai">AI</span></span>
         </a>
         <p>A small studio and tech lab in Durand, Michigan. Every host is an AI character, and we say so.</p>

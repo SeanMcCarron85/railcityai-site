@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="64" height="64">
+<title>Rail City AI</title>
+<!-- Simplified Night Train Badge for small sizes (header, browser tab).
+     Same shapes as logo.svg, with no glow or circuit detail and heavier lines so it stays crisp at 16 to 48px. -->
+<path d="M 449.8 79.0 Q 500.0 50.0 550.2 79.0 L 834.8 243.0 Q 885.0 272.0 885.0 330.0 L 885.0 670.0 Q 885.0 728.0 834.8 757.0 L 550.2 921.0 Q 500.0 950.0 449.8 921.0 L 165.2 757.0 Q 115.0 728.0 115.0 670.0 L 115.0 330.0 Q 115.0 272.0 165.2 243.0 Z" fill="#0f1115" stroke="#22d3ee" stroke-width="64" stroke-linejoin="round"/>
+<path d="M 160 455 L 318 455 M 682 455 L 840 455" stroke="#ff2bd6" stroke-width="40" stroke-linecap="round"/>
+<path d="M 418 700 L 368 850 M 582 700 L 632 850 M 386 780 L 614 780" fill="none" stroke="#22d3ee" stroke-width="44" stroke-linecap="round"/>
+<path d="M 336 652 C 328 540 334 420 366 352 C 384 316 436 300 500 300 C 564 300 616 316 634 352 C 666 420 672 540 664 652 C 610 690 390 690 336 652 Z" fill="none" stroke="#22d3ee" stroke-width="44" stroke-linejoin="round"/>
+<rect x="430" y="490" width="140" height="44" rx="22" fill="#ff2bd6"/>
+</svg>
