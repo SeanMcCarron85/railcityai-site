@@ -296,6 +296,12 @@ main { display: block; }
 .shop-price { color: var(--text) !important; font-weight: 600; font-size: 1.08rem; margin-bottom: 20px; }
 .shop-more { margin-top: 32px; }
 
+/* Template previews are landscape (4:3) on a dark background */
+.template-art, .template-thumbs a { display: block; aspect-ratio: 4 / 3; background: var(--surface-2); }
+.template-art img, .template-thumbs img { width: 100%; height: 100%; object-fit: cover; }
+.template-thumbs { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; border-top: 2px solid var(--surface); border-bottom: 1px solid var(--line); }
+.template-format { font-size: 0.92rem; margin: auto 0 0; }
+
 .slogan {
   font-family: var(--font-head); font-weight: 600; letter-spacing: -0.01em;
   font-size: clamp(1.15rem, 2.2vw, 1.4rem); color: var(--text); margin: 0 0 16px;
